@@ -1,0 +1,72 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  color: #666
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+*::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #666
+
+body input:required:valid,
+body textarea:required:valid
+  color: #666
+
+html, body
+  height: 100%
+  background-color: #FFF
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: 1.65
+  font-family: $default-font
+  overflow-x: hidden
+  opacity: 1
+
+.img-responsive
+  display: block
+  max-width: 100%
+  height: auto
+
+a:hover
+  text-decoration: none
+  color: inherit
+
+@import "../blocks/header/header"
+@import "../blocks/copyright/copyright"
+@import "../blocks/placeholder/placeholder"
+@import "../blocks/footer/footer"
+@import "../blocks/banner/banner"
+@import "../blocks/content/content"
+@import "../blocks/categories/categories"
+@import "../blocks/card/card"
+@import "../blocks/vacancies/vacancies"
+@import "../blocks/companies/companies"
+
+@import "media"
+// Всегда в конце
