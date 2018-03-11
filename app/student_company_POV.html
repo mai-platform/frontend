@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Профиль студента</title>
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Шапка -->
+    <header class="header">
+      <img class="header__logo" src="./img/header/mai.gif"/>
+      <div class="header-search">
+        <input type="text" class="form-control input-sm header-search__input" maxlength="64" placeholder="Я ищу..." />
+        <button type="submit" class="btn btn-primary btn-sm header-search__button">Найти</button>
+      </div>
+      <div class="header__stretch">
+        <div class="header__stretch__messages">
+          <span>2</span>
+        </div>
+        <img class="header__stretch__avatar" src="./img/student/student.jpg"/>
+      </div>
+    </header>
+    <!-- Конец шапки -->
+
+    <!-- Отступ -->
+    <div class="placeholder">
+    </div>
+    <!-- Конец отсутпа -->
+
+    <!-- Баннер компании -->
+    <div class="container">
+      <banner class="jumbotron jumbotron-fluid banner banner-student">
+        <div class="row banner-promo banner-student-promo">
+          <img class="banner-student-promo__avatar" src="./img/student/student.jpg"/>
+        </div>
+        <div class ="row banner-student__info">
+          <div class="banner-student__info__description">
+            <h4 class="banner-student__info__description__name">Екатерина Трофимова</h4>
+            <h5 class="banner-student__info__description__speciality">Системы управления ЛА</h5>
+            <h6 class="banner-student__info__description__location">г. Москва, м. Южная, не готов к переездам, не готов к командировкам</h6>
+          </div>
+          <div class="banner-student__info__education">
+            <div class="row">
+              <div class="col-2 banner-student__info__education__key">Факультет</div>
+              <div class="offset-1 col-9 banner-student__info__education__value">№3 Системы управления, информатика и электроэнергетика</div>
+            </div>
+            <div class="row">
+              <div class="col-2 banner-student__info__education__key">Кафедра</div>
+              <div class="offset-1 col-9 banner-student__info__education__value">№304 Вычислительные машины, системы и сети</div>
+            </div>
+            <div class="row">
+              <div class="col-2 banner-student__info__education__key">Курс</div>
+              <div class="offset-1 col-9 banner-student__info__education__value">2 курс</div>
+            </div>
+          </div>
+        </div>
+      </banner>
+    </div>
+    <!-- Конец баннера -->
+
+    <div class="container content">
+
+    <div class="row">
+      <!-- Карточки навыков студента -->
+      <div class="col-xs-12 col-md-9 skill-cards">
+        <div class="card-skill card-skill-about">
+          <h4 class="card-skill__header">Обо мне</h4>
+          <div class="row">
+            <div class="col-2 card-skill-about-key">Пол:</div>
+            <div class="col-3 card-skill-about-item">Женский</div>
+            <div class="col-1 card-skill-about-key">Телефон:</div>
+            <div class="col-6 card-skill-about-item">8 800 555 35 35 <span class="card-skill-about-item__preffered">— предпочитаемый способ связи</span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 card-skill-about-key">Дата рождения:</div>
+            <div class="col-3 card-skill-about-item">12 сентября 1992</div>
+            <div class="col-1 card-skill-about-key">Email:</div>
+            <div class="col-6 card-skill-about-item">about@mail.ru</div>
+          </div>
+          <div class="row card-skill-about__description">
+            <div class="col-12">
+              Есть публикации в изданиях "Дмашняя бухгалтерия", "Бухгалтерский учет";</br>
+              возможность командировок; замужем, один ребенок;</br>
+              ежегодно переоформляю подписку на специализированные журналы по бухгалтерии, чтобы всегда быть в курсе изменений;</br>
+              умею работать со всеми программами MS Office;
+            </div>
+          </div>
+        </div>
+        <div class="card-skill card-skill-xp">
+          <h4 class="card-skill__header">Опыт работы</h4>
+          <div class="row card-skill-xp__item">
+            <div class="card-skill-xp__item__bullet"><div class="card-skill-certs__item__bullet-inner"></div></div>
+            <div class="card-skill-xp__item__name">Frontend Senior</div>
+            <div class="card-skill-xp__item__company">YANDEX</div>
+            <div class="card-skill-xp__item__description">Октябрь 2016 — Август 2017 (10 месяцев)
+              <div class="card-skill-xp__item__description__details">
+                <p>Разработка SPA приложений</p>
+                <p>Разработка интерфейса для мобильных приложений</p>
+                <p>Веб дизайн</p>
+              </div>
+            </div>
+          </div>
+          <div class="row card-skill-xp__item">
+            <div class="card-skill-xp__item__bullet"><div class="card-skill-certs__item__bullet-inner"></div></div>
+            <div class="card-skill-xp__item__name">Frontend Senior</div>
+            <div class="card-skill-xp__item__company">YANDEX</div>
+            <div class="card-skill-xp__item__description">Октябрь 2016 — Август 2017 (10 месяцев)
+            </div>
+          </div>
+        </div>
+        <div class="card-skill card-skill-certs">
+          <h4 class="card-skill__header">Сертификаты</h4>
+          <div class="row card-skill-certs__item">
+            <div class="card-skill-certs__item__bullet"><div class="card-skill-certs__item__bullet-inner"></div></div>
+            <div class="card-skill-certs__item__name">Сертификат специалиста Яндекс.Метрика</div>
+            <div class="card-skill-certs__item__company">YANDEX</div>
+          </div>
+          <div class="row card-skill-certs__item">
+            <div class="card-skill-certs__item__bullet"><div class="card-skill-certs__item__bullet-inner"></div></div>
+            <div class="card-skill-certs__item__name">Сертификат специалиста Яндекс.Директ</div>
+            <div class="card-skill-certs__item__company">YANDEX</div>
+          </div>
+        </div>
+        <div class="card-skill card-skill-courses">
+          <h4 class="card-skill__header">Курсы повышения квалификации</h4>
+          <div class="row card-skill-courses__item">
+            <div class="card-skill-courses__item__bullet"><div class="card-skill-courses__item__bullet-inner"></div></div>
+            <div class="card-skill-courses__item__name">Анализ данных</div>
+            <div class="card-skill-courses__item__company">YANDEX</div>
+            <div class="card-skill-courses__item__description">Специалист DataScience</div>
+          </div>
+          <div class="row card-skill-courses__item">
+            <div class="card-skill-courses__item__bullet"><div class="card-skill-courses__item__bullet-inner"></div></div>
+            <div class="card-skill-courses__item__name">Рзработка интерфейсов</div>
+            <div class="card-skill-courses__item__company">YANDEX</div>
+            <div class="card-skill-courses__item__description">Дизайнер</div>
+          </div>
+        </div>
+        <div class="card-skill card-skill-confs">
+          <h4 class="card-skill__header">Участие в конференциях</h4>
+          <div class="row card-skill-confs__item">
+            <div class="card-skill-confs__item__bullet"><div class="card-skill-confs__item__bullet-inner"></div></div>
+            <div class="card-skill-confs__item__name">Гагаринские чтения</div>
+            <div class="card-skill-confs__item__description">Современные алгоритмы и технологии для построения математической модели кистей рук</div>
+          </div>
+        </div>
+        <div class="card-skill card-skill-skills">
+          <h4 class="card-skill__header">Навыки</h4>
+          <ul class="card-skill-skills__list">
+            <li class="card-skill-skills__list__item">Python</li>
+            <li class="card-skill-skills__list__item">Js</li>
+            <li class="card-skill-skills__list__item">SolidWorks</li>
+          </ul>
+        </div>
+        <div class="card-skill card-skill-langs">
+          <h4 class="card-skill__header">Языки</h4>
+          <ul class="card-skill-langs__list">
+            <li class="card-skill-langs__list__item">Английский — читаю профессиональную литературу</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Конец карточек навыков студента -->
+
+      <!-- Похожие студенты -->
+      <div class="col-xs-12 col-md-3 students">
+        <h3 class="companies__header">Похожие студенты</h3>
+        <div class="card-student">
+          <img class="card-student__avatar" src="./img/student/student.jpg" />
+          <div class="card-student__name">Екатерина Трофимова</div>
+          <div class="card-student__speciality">Системы управления ЛА</div>
+          <div class="card-student__course">2 курс</div>
+        </div>
+        <div class="card-student">
+          <img class="card-student__avatar" src="./img/student/student.jpg" />
+          <div class="card-student__name">Екатерина Трофимова</div>
+          <div class="card-student__speciality">Системы управления ЛА</div>
+          <div class="card-student__course">2 курс</div>
+        </div>
+        <div class="card-student">
+          <img class="card-student__avatar" src="./img/student/student.jpg" />
+          <div class="card-student__name">Екатерина Трофимова</div>
+          <div class="card-student__speciality">Системы управления ЛА</div>
+          <div class="card-student__course">2 курс</div>
+        </div>
+        <div class="card-student">
+          <img class="card-student__avatar" src="./img/student/student.jpg" />
+          <div class="card-student__name">Екатерина Трофимова</div>
+          <div class="card-student__speciality">Системы управления ЛА</div>
+          <div class="card-student__course">2 курс</div>
+        </div>
+        <div class="card-student">
+          <img class="card-student__avatar" src="./img/student/student.jpg" />
+          <div class="card-student__name">Екатерина Трофимова</div>
+          <div class="card-student__speciality">Системы управления ЛА</div>
+          <div class="card-student__course">2 курс</div>
+        </div>
+        <div class="card-student">
+          <img class="card-student__avatar" src="./img/student/student.jpg" />
+          <div class="card-student__name">Екатерина Трофимова</div>
+          <div class="card-student__speciality">Системы управления ЛА</div>
+          <div class="card-student__course">2 курс</div>
+        </div>
+      </div>
+      <!-- Конец похожих студентов -->
+    </div>
+    </div>
+
+    <!-- Футер -->
+    <footer class="footer container">
+      <img class="footer__logo" src="./img/header/mai.gif"/>
+      <ul class="footer-social">
+        <li class="footer-social__item"><a><i class="fab fa-vk"></i></a></li>
+        <li class="footer-social__item"><a><i class="fab fa-facebook-square"></i></a></li>
+        <li class="footer-social__item"><a><i class="fab fa-youtube"></i></a></li>
+        <li class="footer-social__item"><a><i class="fab fa-twitter"></i></a></li>
+        <li class="footer-social__item"><a><i class="fab fa-instagram"></i></a></li>
+        <li class="footer-social__item"><a><i class="fab fa-telegram"></i></a></li>
+      </ul>
+      <div class="footer-contacts">
+        <span class="footer-contacts__tel">8-800-555-35-35</span>
+        <span class="footer-contacts__adress">2 этаж, ГУК, Волоколамское ш.,<br/>д.4, Москва, Россия</span>
+      </div>
+    </footer>
+    <!-- Конец футера -->
+
+    <!-- Копирайт -->
+    <div class="copyright container">
+      <span>&copy; 2018 Creation All Rights Reserved</span>
+    </div>
+    <!-- Конец копирайта -->
+
+    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./libs/normalize-css/normalize.css">
+    <script src="js/scripts.min.js"></script>
+  </body>
+</html>
