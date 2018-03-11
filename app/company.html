@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Главная</title>
+    <title>Страница компании</title>
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
   </head>
   <body>
@@ -14,6 +14,10 @@
         <button type="submit" class="btn btn-primary btn-sm header-search__button">Найти</button>
       </div>
       <div class="header__stretch">
+        <div class="header__stretch__messages">
+          <span>2</span>
+        </div>
+        <img class="header__stretch__logo" src="./img/companies/sukhoi-rus.jpg"/>
       </div>
     </header>
     <!-- Конец шапки -->
@@ -23,66 +27,45 @@
     </div>
     <!-- Конец отсутпа -->
 
-    <!-- Баннер -->
-    <banner class="jumbotron jumbotron-fluid banner">
-      <div class="row banner-promo">
-        <div class="offset-lg-2 offset-md-1 col-lg-5 col-md-9 col-xs-10 banner-promo-main">
-          <h1 class="col-12 banner-promo-main__header">Выполняйте практику,</br>которая вам нравится</h1>
-          <button class="col-5 banner-promo-main__button">Разместить резюме</button>
-          <button class="col-5 banner-promo-main__button">Опубликовать вакансию</button>
+    <!-- Баннер компании -->
+    <div class="container">
+      <banner class="jumbotron jumbotron-fluid banner banner-company">
+        <div class="row banner-promo banner-company-promo">
+          <img class="banner-company-promo__logo" src="./img/companies/sukhoi-rus.jpg"/>
         </div>
-        <div class="offset-lg-1 col-lg-2 col-md-1 col-xs-12 banner-info">
-          <div class="banner-info__item">
-            <h1 class="banner-info__item__header">4354</h1>
-            <h3 class="banner-info__item__comment">Резюме</h3>
+        <div class ="row banner-company__info">
+          <div class="col-2 banner-company__info__item">
+            <p>Сферы деятельности:</p>
+            <p>Тяжелое машиностроение,</br>Финансовый сектор</p>
           </div>
-          <div class="banner-info__item">
-            <h1 class="banner-info__item__header">1200</h1>
-            <h3 class="banner-info__item__comment">Вакансий</h3>
+          <div class="col-2 banner-company__info__item">
+            <p>Штаб-квартира: Москва</p>
+            <p>Основатель:</br>Павел Осипович Сухой</p>
+            <p>Дата основания:</br>1939 г., Москва</p>
           </div>
-          <div class="banner-info__item">
-            <h1 class="banner-info__item__header">120+</h1>
-            <h3 class="banner-info__item__comment">Практик выполнено</h3>
+          <div class="offset-1 col-2 banner-company__info__name">
+            <h4 class="banner-company__info__name__header">ПАО "Сухой"</h4>
+            <span class="banner-company__info__name__counter">12 вакансий</span>
           </div>
-      </div>
-      </div>
-    </banner>
+          <div class="offset-1 col-2 banner-company__info__item">
+            <p>Генеральный директор:</br>Озар Игорь Яковлевич</p>
+            <p>Телефон:</br>+7 (499) 550-01-06</p>
+            <p>Почта:</br>info@sukhoi.org</p>
+          </div>
+        </div>
+      </banner>
+    </div>
     <!-- Конец баннера -->
 
     <div class="container content">
 
-    <!-- Популярные категории -->
-    <div class="row categories">
-      <h3 class="col-12 categories__header">Популярные категории</h3>
-      <div class="col-12 categories__content">
-        <div class="categories__content-cards">
-          <div class="card-category">
-            <h4 class="card-category__header">Инженер-конструктор</h4>
-            <h5 class="card-category__counter"><span class="card-category__counter__number">312</span> вакансий</h5>
-          </div>
-          <div class="card-category">
-            <h4 class="card-category__header">Инженер-конструктор</h4>
-            <h5 class="card-category__counter"><span class="card-category__counter__number">312</span> вакансий</h5>
-          </div>
-          <div class="card-category">
-            <h4 class="card-category__header">Инженер-конструктор</h4>
-            <h5 class="card-category__counter"><span class="card-category__counter__number">312</span> вакансий</h5>
-          </div>
-        </div>
-        <div class="categories__content-more">
-          <ul class="categories__content-more-list">
-            <li class="categories__content-more-list__item">Маркетинг, реклама, PR <span class="categories__content-more-list__item-counter">(321)</span></li>
-            <li class="categories__content-more-list__item">Директор по персоналу <span class="categories__content-more-list__item-counter">(321)</span></li>
-            <li class="categories__content-more-list__item">Инженер по летным испытаниям <span class="categories__content-more-list__item-counter">(321)</span></li>
-            <li class="categories__content-more-list__item">Инженер по эксплуатации систем воз... <span class="categories__content-more-list__item-counter">(321)</span></li>
-            <li class="categories__content-more-list__item">Заместитель начальника управления... <span class="categories__content-more-list__item-counter">(321)</span></li>
-            <li class="categories__content-more-list__item">Программист <span class="categories__content-more-list-counter">(321)</span></li>
-          </ul>
-          <a class="categories__content-more-all">Посмотреть все вакансии</a>
-        </div>
-      </div>
+    <div class="company container">
+      <h3 class="company__header">О компании</h3>
+      <p>АО "Компания Сухой" — крупнейший российский авиахолдинг с числом работников более 27 тыс. человек. В состав холдинга входят ведущие российские кострукторские бюро и серийные самолетостроительные заводы.</p>
+      <p>Компания обеспечивает выполнение полного цикла работ в авиастроении: от проектирования до эффективного послепродажного обслуживания.</p>
+      <p>Продукция холдинга — боевые самолеты марки "СУ" — являются передовыми образцами мирового рынка вооружений и составляют основу фронтовой авиации России и тактической авиации многих стран мира. Компания — крупнейший российский поставщик авиационной техники на экспорт, занимает 3-е место в мире по объемам производства современных истребителей.</p>
+      <p>В настоящее время Компанией реализуются перспективные программы в области военного и гражданского авиастроения.</p>
     </div>
-    <!-- Конец популярных категорий -->
 
     <div class="row">
       <!-- Популярные вакансии -->
@@ -135,7 +118,7 @@
 
       <!-- Компании -->
       <div class="col-xs-12 col-md-3 companies">
-        <h3 class="companies__header">Компании</h3>
+        <h3 class="companies__header">Похожие компании</h3>
         <div class="card-company">
           <div class="card-company__logoContainer">
             <img class="img-responsive card-company__logo" src="./img/companies/sukhoi.jpg"/>
