@@ -40,7 +40,6 @@
         z-index: 1
         top: 112px
         box-shadow: 0px 8px 10px rgba(0,0,0,0.15)
-        display: hidden
     &__info
       height: 235px
       background-color: #FFF
@@ -65,3 +64,43 @@
           color: #0078f9
           font-size: 14px
           margin-top: 12px
+  &-student
+    &-promo
+      background-image: url("../../img/student/background.jpg")
+      justify-content: flex-start
+      align-items: flex-end
+      padding-left: 135px
+      &__avatar
+        height: 135px
+        width: 135px
+        position: relative
+        z-index: 1
+        top: 67px
+        box-shadow: 0px 8px 10px rgba(0,0,0,0.15)
+    &__info
+      padding: 96px 135px 30px 135px
+      background-color: #FFF
+      &__description
+        width: 45%
+        margin-right: 10%
+        &__name
+          color: #111
+          font-size: 33px
+        &__speciality
+          color: #064cfe
+          font-size: 21px
+          font-family: "OpenSans", sans-serif
+        &__location
+          color: #393939
+          font-size: 16px
+          font-family: "OpenSans", sans-serif
+      &__education
+        width: 45%
+        &__key
+          color: #898989
+          font-size: 12px
+          min-width: 60px
+        &__value
+          color: #064cfe
+          font-size: 14px
+          font-family: "OpenSans", sans-serif
