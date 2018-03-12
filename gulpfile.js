@@ -56,10 +56,11 @@ gulp.task('sass', function() {
 	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.reload({stream: true}));
 });
-
 gulp.task('watch', ['sass', 'js', 'browser-sync'], function() {
 	gulp.watch('app/sass/**/*.sass', ['sass']);
 	gulp.watch('app/blocks/**/*.sass',['sass']);
+	gulp.watch('app/libs/bootstrap-sass/assets/stylesheets/bootstrap/**/*.sass',['sass']);
+	gulp.watch('app/libs/bootstrap-sass/assets/stylesheets/bootstrap/*.sass',['sass']);
 	gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
 	gulp.watch('app/*.html', browserSync.reload);
 	gulp.watch('app/blocks/*.html', browserSync.reload);

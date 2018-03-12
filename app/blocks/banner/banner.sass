@@ -1,18 +1,31 @@
 .banner
+  &_content
+    font-weight: 500
+    color: #FFF
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 350px
+  &_box
+    background-color: rgba(0,0,0,0.4)
+    height: 100%
+    width: 100%
   &-promo
     background-image: url("../../img/banner/sukhoi.jpg")
     background-position: center
     background-size: cover
     height: 350px
-    font-weight: 500
-    color: #FFF
-    display: flex
-    align-items: center
+    width: 100%
+
+
     &-main
       display: flex
       flex-wrap: wrap
       &__header
         font-size: 38px
+        font-weight: 300
+        line-height: 45px
+        margin-bottom: 25px
         padding: 0
       &__button
         background: none
@@ -21,12 +34,19 @@
         border: 1px solid #FFF
         margin-right: 30px
         padding: 17px
+        &:hover
+          background: white
+          color: rgba(0,0,0,0.6)
   &-info
     &__item
+      margin-bottom: 15px
       &__header
+        font-weight: 300
+        line-height: 38px
         font-size: 38px
         margin-bottom: 0
       &__comment
+        font-weight: 500
         font-size: 14px
   &-company
     &-promo
