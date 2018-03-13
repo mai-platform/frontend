@@ -1,182 +1,271 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <title>Страница компании</title>
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-  </head>
-  <body>
-    <!-- Шапка -->
-    <header class="header">
-      <img class="header__logo" src="./img/header/mai.gif"/>
-      <div class="header-search">
-        <input type="text" class="form-control input-sm header-search__input" maxlength="64" placeholder="Я ищу..." />
-        <button type="submit" class="btn btn-primary btn-sm header-search__button">Найти</button>
-      </div>
-      <div class="header__stretch">
-        <div class="header__stretch__messages">
-          <span>2</span>
-        </div>
-        <img class="header__stretch__logo" src="./img/companies/sukhoi-rus.jpg"/>
-      </div>
-    </header>
-    <!-- Конец шапки -->
-
-    <!-- Отступ -->
-    <div class="placeholder">
-    </div>
-    <!-- Конец отсутпа -->
-
-    <!-- Баннер компании -->
+</head>
+<body>
+<!-- Шапка -->
+<nav class="navbar navbar-default">
     <div class="container">
-      <banner class="jumbotron jumbotron-fluid banner banner-company">
-        <div class="row banner-promo banner-company-promo">
-          <img class="banner-company-promo__logo" src="./img/companies/sukhoi-rus.jpg"/>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img alt="Brand" class="header__logo" src="img/header/mai.gif">
+            </a>
         </div>
-        <div class ="row banner-company__info">
-          <div class="col-2 banner-company__info__item">
-            <p>Сферы деятельности:</p>
-            <p>Тяжелое машиностроение,</br>Финансовый сектор</p>
-          </div>
-          <div class="col-2 banner-company__info__item">
-            <p>Штаб-квартира: Москва</p>
-            <p>Основатель:</br>Павел Осипович Сухой</p>
-            <p>Дата основания:</br>1939 г., Москва</p>
-          </div>
-          <div class="offset-1 col-2 banner-company__info__name">
-            <h4 class="banner-company__info__name__header">ПАО "Сухой"</h4>
-            <span class="banner-company__info__name__counter">12 вакансий</span>
-          </div>
-          <div class="offset-1 col-2 banner-company__info__item">
-            <p>Генеральный директор:</br>Озар Игорь Яковлевич</p>
-            <p>Телефон:</br>+7 (499) 550-01-06</p>
-            <p>Почта:</br>info@sukhoi.org</p>
-          </div>
+        <form class="navbar-form navbar-left ">
+            <div class="header-search">
+                <input type="text" class="form-control input-sm header-search__input" maxlength="64"
+                       placeholder="Я ищу..."/>
+                <button type="submit" class="btn btn-primary btn-sm header-search__button">Найти</button>
+            </div>
+        </form>
+        <div class="navbar-right header__stretch">
+            <div class="header__stretch__messages">
+                <span>2</span>
+            </div>
+            <div class="header__name">Екатерина Трифомова</div>
+            <img class="header__stretch__avatar" src="./img/student/student.jpg"/>
         </div>
-      </banner>
-    </div>
-    <!-- Конец баннера -->
 
-    <div class="container content">
+    </div>
+    <div class="container-fluid" style="border-bottom: 2px solid rgba(0,0,0,0.1);"></div>
+    <div class="container">
+        <ul class="nav navbar-nav navbar-left">
+            <li><a href="#">Ищу практику</a></li>
+            <li><a href="#">Ищу работу</a></li>
+            <li><a href="#">Помощь</a></li>
+            <li><a href="#">Компании</a></li>
+        </ul>
+
+    </div>
+</nav>
+<!-- Конец шапки -->
+
+<div class="banner">
+    <div class=" banner-promo banner-company-promo container-fluid"
+         style="background-image: url('img/companies/placeholder.png')">
+    </div>
+    <div class=" banner-company__info">
+        <div class="container">
+            <div class="row" style="display: flex;justify-content: space-between;align-content: flex-start">
+                <div class=" banner-company__info__item">
+                    <div class="banner-company__info__item__name">Сферы деятельности:</div>
+                    <div>Тяжелое машиностроение</div>
+                    <div>Финансовый сектор</div>
+                </div>
+                <div class="banner-company__info__item">
+                    <div>
+                        <div class="banner-company__info__item__name">Штаб-квартира:</div>
+                        Москва
+                    </div>
+                    <div>
+                        <div class="banner-company__info__item__name">Основатель:</div>
+                        Павел Осипович Сухой
+                    </div>
+                    <div>
+                        <div class="banner-company__info__item__name">Дата основания:</div>
+                        1939 г., Москва
+                    </div>
+                </div>
+                <div class=" banner-company__info__name">
+                    <img class="banner-company-promo__logo" src="./img/companies/sukhoi-rus.jpg"/>
+                    <h4 class="banner-company__info__name__header">ПАО "Сухой"</h4>
+                    <span class="banner-company__info__name__counter">12 вакансий</span>
+                </div>
+                <div class=" banner-company__info__item">
+                    <div>
+                        <div class="banner-company__info__item__name">Генеральный директор:</div>
+                        Озар Игорь Яковлевич
+                    </div>
+                    <div>
+                        <div class="banner-company__info__item__name">Телефон:</div>
+                        +7 (499) 550-01-06
+                    </div>
+                    <div>
+                        <div class="banner-company__info__item__name">Почта:</div>
+                        info@sukhoi.org
+                    </div>
+                </div>
+                <div class=" banner-company__info__item">
+                    <button type="button" class="btn btn-primary btn-lg">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Следить
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Конец баннера -->
+
+<!-- Конец баннера -->
+
+
+<div class="container content">
 
     <div class="company container">
-      <h3 class="company__header">О компании</h3>
-      <p>АО "Компания Сухой" — крупнейший российский авиахолдинг с числом работников более 27 тыс. человек. В состав холдинга входят ведущие российские кострукторские бюро и серийные самолетостроительные заводы.</p>
-      <p>Компания обеспечивает выполнение полного цикла работ в авиастроении: от проектирования до эффективного послепродажного обслуживания.</p>
-      <p>Продукция холдинга — боевые самолеты марки "СУ" — являются передовыми образцами мирового рынка вооружений и составляют основу фронтовой авиации России и тактической авиации многих стран мира. Компания — крупнейший российский поставщик авиационной техники на экспорт, занимает 3-е место в мире по объемам производства современных истребителей.</p>
-      <p>В настоящее время Компанией реализуются перспективные программы в области военного и гражданского авиастроения.</p>
+        <h3 class="company__header">О компании</h3>
+        <p>АО "Компания Сухой" — крупнейший российский авиахолдинг с числом работников более 27 тыс. человек. В состав
+            холдинга входят ведущие российские кострукторские бюро и серийные самолетостроительные заводы.</p>
+        <p>Компания обеспечивает выполнение полного цикла работ в авиастроении: от проектирования до эффективного
+            послепродажного обслуживания.</p>
+        <p>Продукция холдинга — боевые самолеты марки "СУ" — являются передовыми образцами мирового рынка вооружений и
+            составляют основу фронтовой авиации России и тактической авиации многих стран мира. Компания — крупнейший
+            российский поставщик авиационной техники на экспорт, занимает 3-е место в мире по объемам производства
+            современных истребителей.</p>
+        <p>В настоящее время Компанией реализуются перспективные программы в области военного и гражданского
+            авиастроения.</p>
     </div>
 
     <div class="row">
-      <!-- Популярные вакансии -->
-      <div class="col-xs-12 col-md-9 vacancies">
-        <h3 class="vacancies__header">Популярные вакансии</h3>
-        <div class="card-vacancy">
-          <img class="card-vacancy__logo" src="./img/vacancies/mig.gif"/>
-          <div class="card-vacancy__description">
-            <h4 class="card-vacancy__description__header">Инженер 1-й категории Отдела организации и контроля технической поддержки</h4>
-            <h5 class="card-vacancy__description__company">РСК "МИГ"</h5>
-            <span class="card-vacancy__description__course">Курс: 2 и выше</span>
-            <p class="card-vacancy__description__requirements">Внедрение социальной политики в Корпорации. Определение потребности персонала по социальной политике,
-            встраивание Единой системы по всей Корпорации. Ведение коллективного договора...</br>Образование высшее</p>
-            <div class="card-vacancy__description__feedback">
-              <button class="btn btn-primary btn-sm card-vacancy__description__feedback__button">Откликнуться</button>
-              <span class="card-vacancy__description__feedback__date">12 Февраль 2018</span>
+        <!-- Популярные вакансии -->
+        <div class="col-xs-12 col-md-9 vacancies">
+            <h3 class="vacancies__header">Вакансии компании</h3>
+            <div class="card-vacancy">
+                <div class="col-md-1">
+                    <img class="card-vacancy__logo img-responsive" src="./img/vacancies/mig.gif"/>
+                </div>
+                <div class="col-md-11">
+                    <div class="card-vacancy__description">
+                        <h4 class="card-vacancy__description__header">Инженер 1-й категории Отдела организации и
+                            контроля технической поддержки</h4>
+                        <h5 class="card-vacancy__description__company">РСК "МИГ"</h5>
+                        <span class="card-vacancy__description__course">Курс: 2 и выше</span>
+                        <p class="card-vacancy__description__requirements">Внедрение социальной политики в Корпорации.
+                            Определение потребности персонала по социальной политике,
+                            встраивание Единой системы по всей Корпорации. Ведение коллективного договора...</br>
+                            Образование высшее</p>
+                        <div class="card-vacancy__description__feedback">
+                            <button class="btn btn-primary btn-lg  card-vacancy__description__feedback__button">
+                                Откликнуться
+                            </button>
+                            <span class="card-vacancy__description__feedback__date">12 Февраль 2018</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="card-vacancy">
-          <img class="card-vacancy__logo" src="./img/vacancies/mig.gif"/>
-          <div class="card-vacancy__description">
-            <h4 class="card-vacancy__description__header">Инженер 1-й категории Отдела организации и контроля технической поддержки</h4>
-            <h5 class="card-vacancy__description__company">РСК "МИГ"</h5>
-            <span class="card-vacancy__description__course">Курс: 2 и выше</span>
-            <p class="card-vacancy__description__requirements">Внедрение социальной политики в Корпорации. Определение потребности персонала по социальной политике,
-            встраивание Единой системы по всей Корпорации. Ведение коллективного договора...</br>Образование высшее</p>
-            <div class="card-vacancy__description__feedback">
-              <button class="btn btn-primary btn-sm card-vacancy__description__feedback__button">Откликнуться</button>
-              <span class="card-vacancy__description__feedback__date">12 Февраль 2018</span>
+            <div class="card-vacancy">
+                <div class="col-md-1">
+                    <img class="card-vacancy__logo img-responsive" src="./img/vacancies/mig.gif"/>
+                </div>
+                <div class="col-md-11">
+                    <div class="card-vacancy__description">
+                        <h4 class="card-vacancy__description__header">Инженер 1-й категории Отдела организации и
+                            контроля технической поддержки</h4>
+                        <h5 class="card-vacancy__description__company">РСК "МИГ"</h5>
+                        <span class="card-vacancy__description__course">Курс: 2 и выше</span>
+                        <p class="card-vacancy__description__requirements">Внедрение социальной политики в Корпорации.
+                            Определение потребности персонала по социальной политике,
+                            встраивание Единой системы по всей Корпорации. Ведение коллективного договора...</br>
+                            Образование высшее</p>
+                        <div class="card-vacancy__description__feedback">
+                            <button class="btn btn-primary btn-lg  card-vacancy__description__feedback__button">
+                                Откликнуться
+                            </button>
+                            <span class="card-vacancy__description__feedback__date">12 Февраль 2018</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="card-vacancy">
-          <img class="card-vacancy__logo" src="./img/vacancies/mig.gif"/>
-          <div class="card-vacancy__description">
-            <h4 class="card-vacancy__description__header">Инженер 1-й категории Отдела организации и контроля технической поддержки</h4>
-            <h5 class="card-vacancy__description__company">РСК "МИГ"</h5>
-            <span class="card-vacancy__description__course">Курс: 2 и выше</span>
-            <p class="card-vacancy__description__requirements">Внедрение социальной политики в Корпорации. Определение потребности персонала по социальной политике,
-            встраивание Единой системы по всей Корпорации. Ведение коллективного договора...</br>Образование высшее</p>
-            <div class="card-vacancy__description__feedback">
-              <button class="btn btn-primary btn-sm card-vacancy__description__feedback__button">Откликнуться</button>
-              <span class="card-vacancy__description__feedback__date">12 Февраль 2018</span>
+            <div class="card-vacancy">
+                <div class="col-md-1">
+                    <img class="card-vacancy__logo img-responsive" src="./img/vacancies/mig.gif"/>
+                </div>
+                <div class="col-md-11">
+                    <div class="card-vacancy__description">
+                        <h4 class="card-vacancy__description__header">Инженер 1-й категории Отдела организации и
+                            контроля технической поддержки</h4>
+                        <h5 class="card-vacancy__description__company">РСК "МИГ"</h5>
+                        <span class="card-vacancy__description__course">Курс: 2 и выше</span>
+                        <p class="card-vacancy__description__requirements">Внедрение социальной политики в Корпорации.
+                            Определение потребности персонала по социальной политике,
+                            встраивание Единой системы по всей Корпорации. Ведение коллективного договора...</br>
+                            Образование высшее</p>
+                        <div class="card-vacancy__description__feedback">
+                            <button class="btn btn-primary btn-lg  card-vacancy__description__feedback__button">
+                                Откликнуться
+                            </button>
+                            <span class="card-vacancy__description__feedback__date">12 Февраль 2018</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-      <!-- Конец популярных вакансий -->
+        <!-- Конец популярных вакансий -->
 
-      <!-- Компании -->
-      <div class="col-xs-12 col-md-3 companies">
-        <h3 class="companies__header">Похожие компании</h3>
-        <div class="card-company">
-          <div class="card-company__logoContainer">
-            <img class="img-responsive card-company__logo" src="./img/companies/sukhoi.jpg"/>
-          </div>
-          <div class="card-company__description">
-            <span class="card-company__description__name">Сухой, компания</span>
-            <span class="card-company__description__vacancies">12 вакансий</span>
-          </div>
-        </div>
-        <div class="card-company">
-          <div class="card-company__logoContainer">
-            <img class="img-responsive card-company__logo" src="./img/companies/sukhoi.jpg"/>
-          </div>
-          <div class="card-company__description">
-            <span class="card-company__description__name">Сухой, компания</span>
-            <span class="card-company__description__vacancies">12 вакансий</span>
-          </div>
-        </div>
-        <div class="card-company">
-          <div class="card-company__logoContainer">
-            <img class="img-responsive card-company__logo" src="./img/companies/sukhoi.jpg"/>
-          </div>
-          <div class="card-company__description">
-            <span class="card-company__description__name">Сухой, компания</span>
-            <span class="card-company__description__vacancies">12 вакансий</span>
-          </div>
-        </div>
-      </div>
-      <!-- Конец компаний -->
-    </div>
-    </div>
+        <!-- Компании -->
+        <div class="col-xs-12 col-md-3 companies">
+            <h3 class="companies__header">Похожие компании</h3>
+                        <div class="card-company-item">
+                <div class="card-company-item__logoContainer">
+                    <img class="img-responsive card-company-item__logo" src="./img/companies/sukhoi.jpg"/>
+                </div>
+                <div class="card-company-item__description">
+                    <span class="card-company-item__description__name">Сухой, компания</span>
+                    <span class="card-company-item__description__vacancies">
+                        <span class="card-company-item__description__count">12</span> вакансий</span>
+                </div>
+            </div>
+            <div class="card-company-item">
+                <div class="card-company-item__logoContainer">
+                    <img class="img-responsive card-company-item__logo" src="./img/companies/sukhoi.jpg"/>
+                </div>
+                <div class="card-company-item__description">
+                    <span class="card-company-item__description__name">Сухой, компания</span>
+                    <span class="card-company-item__description__vacancies">
+                        <span class="card-company-item__description__count">12</span> вакансий</span>
+                </div>
+            </div>
+            <div class="card-company-item">
+                <div class="card-company-item__logoContainer">
+                    <img class="img-responsive card-company-item__logo" src="./img/companies/sukhoi.jpg"/>
+                </div>
+                <div class="card-company-item__description">
+                    <span class="card-company-item__description__name">Сухой, компания</span>
+                    <span class="card-company-item__description__vacancies">
+                        <span class="card-company-item__description__count">12</span> вакансий</span>
+                </div>
+            </div>
 
-    <!-- Футер -->
-    <footer class="footer container">
-      <img class="footer__logo" src="./img/header/mai.gif"/>
-      <ul class="footer-social">
+        </div>
+        <!-- Конец компаний -->
+    </div>
+</div>
+
+<!-- Футер -->
+<footer class="footer container">
+    <img class="footer__logo" src="./img/header/mai.gif"/>
+    <ul class="footer-social">
         <li class="footer-social__item"><a><i class="fab fa-vk"></i></a></li>
         <li class="footer-social__item"><a><i class="fab fa-facebook-square"></i></a></li>
         <li class="footer-social__item"><a><i class="fab fa-youtube"></i></a></li>
         <li class="footer-social__item"><a><i class="fab fa-twitter"></i></a></li>
         <li class="footer-social__item"><a><i class="fab fa-instagram"></i></a></li>
         <li class="footer-social__item"><a><i class="fab fa-telegram"></i></a></li>
-      </ul>
-      <div class="footer-contacts">
+    </ul>
+    <div class="footer-contacts">
         <span class="footer-contacts__tel">8-800-555-35-35</span>
         <span class="footer-contacts__adress">2 этаж, ГУК, Волоколамское ш.,<br/>д.4, Москва, Россия</span>
-      </div>
-    </footer>
-    <!-- Конец футера -->
-
-    <!-- Копирайт -->
-    <div class="copyright container">
-      <span>&copy; 2018 Creation All Rights Reserved</span>
     </div>
-    <!-- Конец копирайта -->
+</footer>
+<!-- Конец футера -->
 
-    <link rel="stylesheet" href="./css/main.min.css">
-    <link rel="stylesheet" href="./libs/normalize-css/normalize.css">
-    <script src="js/scripts.min.js"></script>
-  </body>
+<!-- Копирайт -->
+<div class="copyright container">
+    <span>&copy; 2018 Creation All Rights Reserved</span>
+</div>
+<!-- Конец копирайта -->
+
+<link rel="stylesheet" href="./css/main.min.css">
+<link rel="stylesheet" href="./libs/normalize-css/normalize.css">
+<script src="js/scripts.min.js"></script>
+</body>
 </html>
