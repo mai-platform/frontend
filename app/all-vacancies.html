@@ -32,8 +32,8 @@
             <div class="header__stretch__messages">
                 <span>2</span>
             </div>
-            <div class="header__name">ПАО "Сухой"</div>
-            <img class="header__stretch__avatar" src="./img/companies/sukhoi.jpg"/>
+            <div class="header__name">Екатерина Трифомова</div>
+            <img class="header__stretch__avatar" src="./img/student/student.jpg"/>
         </div>
 
     </div>
@@ -50,109 +50,223 @@
 </nav>
 <!-- Конец шапки -->
 
+<div class="banner">
+    <div class=" banner-promo banner-company-promo container-fluid"
+         style="background-image: url('img/companies/placeholder.png')">
+    </div>
+    <div class=" banner-company__info">
+        <div class="container">
+            <div class="row" style="display: flex;justify-content: space-between;align-content: flex-start">
+                <div class=" banner-company__info__item">
+                    <div class="banner-company__info__item__name">Сферы деятельности:</div>
+                    <div>Тяжелое машиностроение</div>
+                    <div>Финансовый сектор</div>
+                </div>
+                <div class="banner-company__info__item">
+                    <div>
+                        <div class="banner-company__info__item__name">Штаб-квартира:</div>
+                        Москва
+                    </div>
+                    <div>
+                        <div class="banner-company__info__item__name">Основатель:</div>
+                        Павел Осипович Сухой
+                    </div>
+                    <div>
+                        <div class="banner-company__info__item__name">Дата основания:</div>
+                        1939 г., Москва
+                    </div>
+                </div>
+                <div class=" banner-company__info__name">
+                    <img class="banner-company-promo__logo" src="./img/companies/sukhoi-rus.jpg"/>
+                    <h4 class="banner-company__info__name__header">ПАО "Сухой"</h4>
+                    <span class="banner-company__info__name__counter">12 вакансий</span>
+                </div>
+                <div class=" banner-company__info__item">
+                    <div>
+                        <div class="banner-company__info__item__name">Генеральный директор:</div>
+                        Озар Игорь Яковлевич
+                    </div>
+                    <div>
+                        <div class="banner-company__info__item__name">Телефон:</div>
+                        +7 (499) 550-01-06
+                    </div>
+                    <div>
+                        <div class="banner-company__info__item__name">Почта:</div>
+                        info@sukhoi.org
+                    </div>
+                </div>
+                <div class=" banner-company__info__item">
+                    <button type="button" class="btn btn-primary btn-lg">
+                        Изменить
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Конец баннера -->
+
 <div class="container content">
     <div class="row">
 
-        <!-- Компания -->
-        <div class="col-md-3 card-company">
-            <div class="card-company__head">
-                <img class="card-company__head__logo" src="./img/companies/sukhoi-rus.jpg"/>
-            </div>
-            <div class="card-company__description">
-                <div class="card-company__description__name">
-                    ПАО "Сухой"
-                </div>
-                <div class="card-company__description__count">
-                    12 <span style="color: black">вакансий</span>
-                </div>
-                <p>Штаб-квартира: <span class="card-company__description-light"></br>Москва</span></p>
-                <p>Основатель: <span class="card-company__description-light"></br>Павел Осипович Сухой</span></p>
-                <p>Дата основания: <span class="card-company__description-light"></br>1939, г.Москва</span></p>
-                <p>Сферы деятельности: <span class="card-company__description-light"></br>Тяжелое машиностроение</br>
-                    Финансовый сектор</span></p>
-                <p>Генеральный директор: <span class="card-company__description-light"></br>Озар Игорь Яковлевич</span>
-                </p>
-                <p>Телефон: <span class="card-company__description-light"></br>+7 (499) 550-01-06</span></p>
-                <p>Почта: <span class="card-company__description-light"></br>info@sukhoi.org</span></p>
-            </div>
-        </div>
-        <!-- Конец компании -->
 
         <!-- Все вакансии -->
-        <div class="col-xs-12 col-md-9 vacancies">
-            <h3 class="vacancies__header">Вакансии компании</h3>
-            <button class="btn btn-primary btn-lg button-new-vacancy">
-              Разместить вакансию
-            </button>
-            <div class="card-vacancy">
+        <div class="col-xs-12 col-md-12 vacancies">
+            <h3 class="vacancies__header" style="display: flex;align-items: flex-start;">Вакансии компании
+                <button class="btn btn-primary btn-lg button-new-vacancy" style="margin-left: 15px">
+                    Разместить вакансию
+                </button>
+            </h3>
+
+            <div class="card-vacancy" style="align-items: inherit;">
                 <div class="col-md-1">
                     <img class="card-vacancy__logo img-responsive" src="./img/companies/sukhoi-rus.jpg"/>
                 </div>
-                <div class="col-md-11">
+                <div class="col-md-9">
                     <div class="card-vacancy__description">
                         <h4 class="card-vacancy__description__header">Инженер 1-й категории Отдела организации и
                             контроля технической поддержки</h4>
                         <h5 class="card-vacancy__description__company">ПАО "Сухой"</h5>
                         <span class="card-vacancy__description__course">Курс: 2 и выше</span>
-                        <p class="card-vacancy__description__requirements">Внедрение социальной политики в Корпорации.
+                        <p class="card-vacancy__description__requirements">Внедрение социальной политики в
+                            Корпорации.
                             Определение потребности персонала по социальной политике,
                             встраивание Единой системы по всей Корпорации. Ведение коллективного договора...</br>
                             Образование высшее</p>
-                        <div class="card-vacancy__description__feedback">
-                            <button class="btn btn-danger btn-lg  card-vacancy__description__feedback__button">
-                                Закрыть вакансию
-                            </button>
-                            <span class="card-vacancy__description__feedback__date">12 Февраль 2018</span>
-                        </div>
                     </div>
                 </div>
+
+                <div class="" style="display: flex;flex-direction: column;justify-content: space-between">
+                    <div class="col-md-12">
+                        <button class="  col-md-12 btn btn-primary   ">
+                            Изменить
+                        </button>
+                        <button class=" col-md-12 btn btn-default   " style="margin-top: 20px">
+                            Отклики
+                        </button>
+                    </div>
+                    <div class="col-md-12">
+                        <button class="col-md-12 btn btn-danger">
+                            Удалить
+                        </button>
+                    </div>
+
+                </div>
+
+
             </div>
-            <div class="card-vacancy">
+            <div class="card-vacancy" style="align-items: inherit;">
                 <div class="col-md-1">
                     <img class="card-vacancy__logo img-responsive" src="./img/companies/sukhoi-rus.jpg"/>
                 </div>
-                <div class="col-md-11">
+                <div class="col-md-9">
                     <div class="card-vacancy__description">
                         <h4 class="card-vacancy__description__header">Инженер 1-й категории Отдела организации и
                             контроля технической поддержки</h4>
                         <h5 class="card-vacancy__description__company">ПАО "Сухой"</h5>
                         <span class="card-vacancy__description__course">Курс: 2 и выше</span>
-                        <p class="card-vacancy__description__requirements">Внедрение социальной политики в Корпорации.
+                        <p class="card-vacancy__description__requirements">Внедрение социальной политики в
+                            Корпорации.
                             Определение потребности персонала по социальной политике,
                             встраивание Единой системы по всей Корпорации. Ведение коллективного договора...</br>
                             Образование высшее</p>
-                        <div class="card-vacancy__description__feedback">
-                            <button class="btn btn-danger btn-lg  card-vacancy__description__feedback__button">
-                                Закрыть вакансию
-                            </button>
-                            <span class="card-vacancy__description__feedback__date">12 Февраль 2018</span>
-                        </div>
                     </div>
                 </div>
+
+                <div class="" style="display: flex;flex-direction: column;justify-content: space-between">
+                    <div class="col-md-12">
+                        <button class="  col-md-12 btn btn-primary   ">
+                            Изменить
+                        </button>
+                        <button class=" col-md-12 btn btn-default   " style="margin-top: 20px">
+                            Отклики
+                        </button>
+                    </div>
+                    <div class="col-md-12">
+                        <button class="col-md-12 btn btn-danger">
+                            Удалить
+                        </button>
+                    </div>
+
+                </div>
+
+
             </div>
-            <div class="card-vacancy">
+            <div class="card-vacancy" style="align-items: inherit;">
                 <div class="col-md-1">
                     <img class="card-vacancy__logo img-responsive" src="./img/companies/sukhoi-rus.jpg"/>
                 </div>
-                <div class="col-md-11">
+                <div class="col-md-9">
                     <div class="card-vacancy__description">
                         <h4 class="card-vacancy__description__header">Инженер 1-й категории Отдела организации и
                             контроля технической поддержки</h4>
                         <h5 class="card-vacancy__description__company">ПАО "Сухой"</h5>
                         <span class="card-vacancy__description__course">Курс: 2 и выше</span>
-                        <p class="card-vacancy__description__requirements">Внедрение социальной политики в Корпорации.
+                        <p class="card-vacancy__description__requirements">Внедрение социальной политики в
+                            Корпорации.
                             Определение потребности персонала по социальной политике,
                             встраивание Единой системы по всей Корпорации. Ведение коллективного договора...</br>
                             Образование высшее</p>
-                        <div class="card-vacancy__description__feedback">
-                            <button tabindex="-1" class="btn btn-danger btn-lg  card-vacancy__description__feedback__button">
-                                Закрыть вакансию
-                            </button>
-                            <span class="card-vacancy__description__feedback__date">12 Февраль 2018</span>
-                        </div>
                     </div>
                 </div>
+
+                <div class="" style="display: flex;flex-direction: column;justify-content: space-between">
+                    <div class="col-md-12">
+                        <button class="  col-md-12 btn btn-primary   ">
+                            Изменить
+                        </button>
+                        <button class=" col-md-12 btn btn-default   " style="margin-top: 20px">
+                            Отклики
+                        </button>
+                    </div>
+                    <div class="col-md-12">
+                        <button class="col-md-12 btn btn-danger">
+                            Удалить
+                        </button>
+                    </div>
+
+                </div>
+
+
             </div>
+            <div class="card-vacancy" style="align-items: inherit;">
+                <div class="col-md-1">
+                    <img class="card-vacancy__logo img-responsive" src="./img/companies/sukhoi-rus.jpg"/>
+                </div>
+                <div class="col-md-9">
+                    <div class="card-vacancy__description">
+                        <h4 class="card-vacancy__description__header">Инженер 1-й категории Отдела организации и
+                            контроля технической поддержки</h4>
+                        <h5 class="card-vacancy__description__company">ПАО "Сухой"</h5>
+                        <span class="card-vacancy__description__course">Курс: 2 и выше</span>
+                        <p class="card-vacancy__description__requirements">Внедрение социальной политики в
+                            Корпорации.
+                            Определение потребности персонала по социальной политике,
+                            встраивание Единой системы по всей Корпорации. Ведение коллективного договора...</br>
+                            Образование высшее</p>
+                    </div>
+                </div>
+
+                <div class="" style="display: flex;flex-direction: column;justify-content: space-between">
+                    <div class="col-md-12">
+                        <button class="  col-md-12 btn btn-primary   ">
+                            Изменить
+                        </button>
+                        <button class=" col-md-12 btn btn-default   " style="margin-top: 20px">
+                            Отклики
+                        </button>
+                    </div>
+                    <div class="col-md-12">
+                        <button class="col-md-12 btn btn-danger">
+                            Удалить
+                        </button>
+                    </div>
+
+                </div>
+
+
+            </div>
+
         </div>
         <!-- Конец всех вакансий -->
 
