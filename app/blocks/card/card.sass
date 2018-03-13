@@ -59,7 +59,9 @@
       &-withoutLogo
         margin-left: 0
       &__header
-        font-size: 16px
+        font-size: 24px
+        font-family: "Open Sans", sans-serif
+        font-weight: 400
         color: #111
       &__company
         color: #127ac7
@@ -120,10 +122,14 @@
     background-color: #FFF
     width: 100%
     display: flex
-    flex-direction: row
-    align-items: flex-start
-    justify-content: flex-start
     margin-bottom: 30px
+    align-items: center
+    &__content
+      display: flex
+      width: 100%
+      flex-direction: row
+      align-items: flex-end
+      justify-content: flex-start
     &__avatar
       height: 70px
       width: 70px
@@ -152,7 +158,6 @@
         &-special
           color: #898989
     &__education
-      align-self: flex-end
       &__item
         color: #898989
         font-size: 12px
