@@ -48,67 +48,154 @@
     </div>
 </nav>
 <!-- Конец шапки -->
+<div class="container">
+        <h2 class="responses__header" style="    font-size: 24px;">Добавление вакансии</h2>
 
-<div class="container content">
+</div>
+<div class="container content" style="padding-top: 10px;font-family: 'OpenSans', Sans-Serif">
+
+
     <div class="row">
-
-    <div class="vacancy-submit__header">Название вакансии</div>
-    <input type="text" class="form-control input-sm" maxlength="64" placeholder="Введите название вакансии..."/>
-
-    <div class="vacancy-submit__header">Курс</div>
-    <div class="dropdown">
-      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-        Выберите курс
-        <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-        <li class="vacancy__dropdown__item">1 и выше</li>
-        <li class="vacancy__dropdown__item">2 и выше</li>
-        <li class="vacancy__dropdown__item">3 и выше</li>
-        <li class="vacancy__dropdown__item">4 и выше</li>
-        <li role="separator" class="divider"></li>
-        <li class="vacancy__dropdown__item">Магистратура 1 и выше</li>
-        <li class="vacancy__dropdown__item">Магистратура 2 и выше</li>
-      </ul>
+        <div class="col-md-3">
+            <label for="inputPassword" class="control-label">Название вакансии</label>
+        </div>
+        <div class="col-md-9">
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <input type="password" class="form-control " id="inputPassword" placeholder="Название">
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="vacancy-submit__header">Факультет</div>
-    <div class="dropdown">
-      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-        Выберите факультет
-        <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-        <li class="vacancy__dropdown__item">№1 Авиационная техника</li>
-        <li class="vacancy__dropdown__item">№2 Авиационные, ракетные двигатели и энергетические установки</li>
-        <li class="vacancy__dropdown__item">№3 Системы управления, информатика и электроэнергетика</li>
-        <li class="vacancy__dropdown__item">№4 Радиоэлектроника летательных аппаратов</li>
-        <li class="vacancy__dropdown__item">№5 Инженерной экономики и гуманитарных наук</li>
-        <li class="vacancy__dropdown__item">№6 Аэрокосмический</li>
-        <li class="vacancy__dropdown__item">№7 Робототехнические и интеллектуальные системы</li>
-        <li class="vacancy__dropdown__item">№8 Информационные технологии и прикладная математика</li>
-        <li class="vacancy__dropdown__item">№9 Общеинженерной подготовки</li>
-      </ul>
+    <div class="row" style="margin-top: 15px;">
+        <div class="col-md-3">
+            <label for="inputPassword" class="control-label">Курс</label>
+        </div>
+        <div class="col-md-9">
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                    1 Курс
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                    2 Курс
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                    3 Курс
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                    4 Курс
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                    5 Курс
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 15px;">
+        <div class="col-md-3">
+            <label for="inputPassword" class="control-label">Факультет</label>
+        </div>
+        <div class="col-md-9">
+            <select class="form-control">
+                <option>№1 Авиационная техника</option>
+                <option>№2 Авиационные, ракетные двигатели и энергетические установки</option>
+                <option>№3 Системы управления, информатика и электроэнергетика</option>
+                <option>№4 Радиоэлектроника летательных аппаратов</option>
+                <option>№5 Инженерной экономики и гуманитарных наук</option>
+                <option>№6 Аэрокосмический</option>
+                <option>№7 Робототехнические и интеллектуальные системы</option>
+                <option>№8 Информационные технологии и прикладная математика</option>
+                <option>№9 Общеинженерной подготовки</option>
+            </select>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 15px;">
+        <div class="col-md-3">
+            <label for="inputPassword" class="control-label">Кафедра</label>
+        </div>
+        <div class="col-md-9">
+            <select class="form-control">
+                <option>№301 Системы управлния ЛА</option>
+                <option>№2 Авиационные, ракетные двигатели и энергетические установки</option>
+                <option>№3 Системы управления, информатика и электроэнергетика</option>
+                <option>№4 Радиоэлектроника летательных аппаратов</option>
+                <option>№5 Инженерной экономики и гуманитарных наук</option>
+                <option>№6 Аэрокосмический</option>
+                <option>№7 Робототехнические и интеллектуальные системы</option>
+                <option>№8 Информационные технологии и прикладная математика</option>
+                <option>№9 Общеинженерной подготовки</option>
+            </select>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 15px;">
+        <div class="col-md-3">
+            <label for="inputPassword" class="control-label">Специальность</label>
+        </div>
+        <div class="col-md-9">
+            <select class="form-control">
+                <option>№301 Системы управлния ЛА</option>
+                <option>№2 Авиационные, ракетные двигатели и энергетические установки</option>
+                <option>№3 Системы управления, информатика и электроэнергетика</option>
+                <option>№4 Радиоэлектроника летательных аппаратов</option>
+                <option>№5 Инженерной экономики и гуманитарных наук</option>
+                <option>№6 Аэрокосмический</option>
+                <option>№7 Робототехнические и интеллектуальные системы</option>
+                <option>№8 Информационные технологии и прикладная математика</option>
+                <option>№9 Общеинженерной подготовки</option>
+            </select>
+        </div>
+    </div>
+        <div class="row" style="margin-top: 15px;">
+        <div class="col-md-3">
+            <label for="inputPassword" class="control-label">Занятость</label>
+        </div>
+        <div class="col-md-9">
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                    Полная
+                </label>
+            </div><div class="radio">
+                <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                    Частичная
+                </label>
+            </div>
+
+        </div>
     </div>
 
-    <div class="vacancy-submit__header">Специальность</div>
-    <div class="dropdown">
-      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-        Выберите специальность
-        <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
-        <!-- динамически заполняется -->
-      </ul>
+    <div class="row" style="margin-top: 15px;">
+        <div class="col-md-3">
+            <label for="inputPassword" class="control-label">Описание</label>
+        </div>
+        <div class="col-md-9">
+            <textarea class="form-control vacancy-submit__info"></textarea>
+        </div>
+    </div>
+    <div class="col-md-offset-10 col-md-2">
+        <button class="btn btn-primary btn-lg button-new-vacancy">
+            Разместить
+            <!-- кнопка должна создавать новую вакансию, забрав данные из полей выше -->
+        </button>
     </div>
 
-    <div class="vacancy-submit__header">Описание вакансии</div><textarea class="form-control vacancy-submit__info"></textarea>
+</div>
 
-    </div>
-    <button class="btn btn-primary btn-lg button-new-vacancy">
-      Разместить вакансию
-      <!-- кнопка должна создавать новую вакансию, забрав данные из полей выше -->
-    </button>
 </div>
 
 <!-- Футер -->
@@ -138,6 +225,8 @@
 <link rel="stylesheet" href="./css/main.min.css">
 <link rel="stylesheet" href="./libs/normalize-css/normalize.css">
 <script src="js/scripts.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 </body>
 </html>
