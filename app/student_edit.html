@@ -53,217 +53,287 @@
 <!-- Конец шапки -->
 
 <div class="banner">
-    <div class=" banner-promo banner-student-promo container-fluid">
+  <div class="container">
+          <h2 class="responses__header" style="    font-size: 24px;">Редактор профиля студента</h2>
 
+  </div>
+  <div class="container content" style="padding-top: 10px;font-family: 'OpenSans', Sans-Serif">
+      <div class="row">
+          <div class="col-md-3">
+              <label for="inputPassword" class="control-label">Имя</label>
+          </div>
+          <div class="col-md-9">
+              <div class="form-group">
+                  <div class="col-sm-12">
+                      <input type="text" class="form-control " id="inputPassword" placeholder="">
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="row" style="margin-top: 15px;">
+          <div class="col-md-3">
+              <label for="inputPassword" class="control-label">Фамилия</label>
+          </div>
+          <div class="col-md-9">
+              <div class="form-group">
+                  <div class="col-sm-12">
+                      <input type="text" class="form-control " id="inputPassword" placeholder="">
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="row" style="margin-top: 15px;">
+      <div class="col-md-3">
+          <label for="inputPassword" class="control-label">Курс</label>
+      </div>
+      <div class="col-md-9">
+          <div class="radio">
+              <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                  1 Курс
+              </label>
+          </div>
+          <div class="radio">
+              <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                  2 Курс
+              </label>
+          </div>
+          <div class="radio">
+              <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                  3 Курс
+              </label>
+          </div>
+          <div class="radio">
+              <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                  4 Курс
+              </label>
+          </div>
+          <div class="radio">
+              <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                  5 Курс
+              </label>
+          </div>
+      </div>
     </div>
-    <div class="banner-student__info">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 banner-student__head">
-                    <img class="banner-student-promo__avatar" src="./img/student/student.jpg"/>
-                    <button type="button" class="btn btn-primary btn-lg">
-                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Изменить
-                    </button>
-                </div>
-                <div style="display: flex; justify-content: space-between; align-items: center; flex-direction: row;width: 100%;">
-                    <div class="banner-student__info__description ">
-                        <h4 class="banner-student__info__description__name">Екатерина Трофимова</h4>
-                        <h5 class="banner-student__info__description__speciality">Системы управления ЛА</h5>
-                        <h6 class="banner-student__info__description__location">г. Москва, м. Южная, не готов к
-                            переездам,
-                            не
-                            готов к командировкам</h6>
-                    </div>
-                    <div class="banner-student__info__education ">
-                        <div class="row">
-                            <div class="col-md-2 banner-student__info__education__key">Факультет</div>
-                            <div class="offset-1 col-md-9 banner-student__info__education__value">№3 Системы управления,
-                                информатика и электроэнергетика
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-2 banner-student__info__education__key">Кафедра</div>
-                            <div class="offset-1 col-md-9 banner-student__info__education__value">№304 Вычислительные
-                                машины,
-                                системы и сети
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-2 banner-student__info__education__key">Курс</div>
-                            <div class="offset-1 col-md-9 banner-student__info__education__value">2 курс</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="row" style="margin-top: 15px;">
+      <div class="col-md-3">
+          <label for="inputPassword" class="control-label">Факультет</label>
+      </div>
+      <div class="col-md-9">
+          <select class="form-control">
+              <option>№1 Авиационная техника</option>
+              <option>№2 Авиационные, ракетные двигатели и энергетические установки</option>
+              <option>№3 Системы управления, информатика и электроэнергетика</option>
+              <option>№4 Радиоэлектроника летательных аппаратов</option>
+              <option>№5 Инженерной экономики и гуманитарных наук</option>
+              <option>№6 Аэрокосмический</option>
+              <option>№7 Робототехнические и интеллектуальные системы</option>
+              <option>№8 Информационные технологии и прикладная математика</option>
+              <option>№9 Общеинженерной подготовки</option>
+          </select>
+      </div>
+  </div>
+  <div class="row" style="margin-top: 15px;">
+      <div class="col-md-3">
+          <label for="inputPassword" class="control-label">Кафедра</label>
+      </div>
+      <div class="col-md-9">
+          <select class="form-control">
+              <option>№301 Системы управлния ЛА</option>
+              <option>№2 Авиационные, ракетные двигатели и энергетические установки</option>
+              <option>№3 Системы управления, информатика и электроэнергетика</option>
+              <option>№4 Радиоэлектроника летательных аппаратов</option>
+              <option>№5 Инженерной экономики и гуманитарных наук</option>
+              <option>№6 Аэрокосмический</option>
+              <option>№7 Робототехнические и интеллектуальные системы</option>
+              <option>№8 Информационные технологии и прикладная математика</option>
+              <option>№9 Общеинженерной подготовки</option>
+          </select>
+      </div>
+  </div>
+  <div class="row" style="margin-top: 15px;">
+      <div class="col-md-3">
+          <label for="inputPassword" class="control-label">Специальность</label>
+      </div>
+      <div class="col-md-9">
+          <select class="form-control">
+              <option>№301 Системы управлния ЛА</option>
+              <option>№2 Авиационные, ракетные двигатели и энергетические установки</option>
+              <option>№3 Системы управления, информатика и электроэнергетика</option>
+              <option>№4 Радиоэлектроника летательных аппаратов</option>
+              <option>№5 Инженерной экономики и гуманитарных наук</option>
+              <option>№6 Аэрокосмический</option>
+              <option>№7 Робототехнические и интеллектуальные системы</option>
+              <option>№8 Информационные технологии и прикладная математика</option>
+              <option>№9 Общеинженерной подготовки</option>
+          </select>
+      </div>
+  </div>
+
+
+      <div class="row" style="margin-top: 15px;">
+          <div class="col-md-3">
+              <label for="inputPassword" class="control-label">Город проживания</label>
+          </div>
+          <div class="col-md-9">
+              <div class="form-group">
+                  <div class="col-sm-12">
+                      <input type="text" class="form-control " id="inputPassword" placeholder="">
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="row" style="margin-top: 15px;">
+      <div class="col-md-3">
+          <label for="inputPassword" class="control-label">Пол</label>
+      </div>
+      <div class="col-md-9">
+          <div class="radio">
+              <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                  Мужской
+              </label>
+          </div>
+          <div class="radio">
+              <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                  Женский
+              </label>
+          </div>
+      </div>
     </div>
-</div>
-<!-- Конец баннера -->
 
-<div class="container content">
+      <div class="row" style="margin-top: 15px;">
+          <div class="col-md-3">
+              <label for="inputPassword" class="control-label">Дата Рождения</label>
+          </div>
+          <div class="col-md-9">
+              <div class="form-group">
+                  <div class="col-sm-3">
+                      <input type="date" class="form-control " id="inputPassword" placeholder="">
+                  </div>
+              </div>
+          </div>
+      </div>
 
-    <div class="row">
-        <!-- Карточки навыков студента -->
-        <div class=" col-xs-12 col-md-12 skill-cards">
-            <div class="card-skill card-skill-about">
-                <h4 class="card-skill__header">Обо мне</h4>
-                <div class="row">
-                    <div class="col-md-2 card-skill-about-key">Пол:</div>
-                    <div class="col-md-3 card-skill-about-item">Женский</div>
-                    <div class="col-md-1 card-skill-about-key">Телефон:</div>
-                    <div class="col-md-6 card-skill-about-item">8 800 555 35 35 <span
-                            class="card-skill-about-item__preffered">— предпочитаемый способ связи</span></div>
-                </div>
-                <div class="row">
-                    <div class="col-md-2 card-skill-about-key">Дата рождения:</div>
-                    <div class="col-md-3 card-skill-about-item">12 сентября 1992</div>
-                    <div class="col-md-1 card-skill-about-key">Email:</div>
-                    <div class="col-md-6 card-skill-about-item">about@mail.ru</div>
-                </div>
-                <div class="row card-skill-about__description">
-                    <div class="col-md-12">
-                        Есть публикации в изданиях "Дмашняя бухгалтерия", "Бухгалтерский учет";</br>
-                        возможность командировок; замужем, один ребенок;</br>
-                        ежегодно переоформляю подписку на специализированные журналы по бухгалтерии, чтобы всегда быть в
-                        курсе изменений;</br>
-                        умею работать со всеми программами MS Office;
-                    </div>
-                </div>
-                <button class="btn btn-primary btn-sm " id="change_about">
-                    Изменить
-                  </button>
-            </div>
-            <div class="card-skill card-skill-xp">
-                <h4 class="card-skill__header">Опыт работы</h4>
-                <div class="row card-skill-xp__item">
-                    <div class="card-skill-xp__item__bullet">
-                        <div class="card-skill-certs__item__bullet-inner"></div>
-                    </div>
-                    <div class="card-skill-xp__item__name">Frontend Senior</div>
-                    <button class="btn btn-danger btn-sm delete-item">
-                        Удалить
-                      </button>
-                    <div class="card-skill-xp__item__company">YANDEX</div>
-                    <div class="card-skill-xp__item__description">Октябрь 2016 — Август 2017 (10 месяцев)
-                        <div class="card-skill-xp__item__description__details">
-                            <p>Разработка SPA приложений</p>
-                            <p>Разработка интерфейса для мобильных приложений</p>
-                            <p>Веб дизайн</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row card-skill-xp__item">
-                    <div class="card-skill-xp__item__bullet">
-                        <div class="card-skill-certs__item__bullet-inner"></div>
-                    </div>
-                    <div class="card-skill-xp__item__name">Frontend Senior</div>
-                      <button class="btn btn-danger btn-sm delete-item">
-                        Удалить
-                      </button>
-                    <div class="card-skill-xp__item__company">YANDEX</div>
-                    <div class="card-skill-xp__item__description">Октябрь 2016 — Август 2017 (10 месяцев)
-                    </div>
-                </div>
-                <button class="btn btn-success btn-sm " id="add_xp">
-                    Добавить место работы
-                </button>
-            </div>
-            <div class="card-skill card-skill-certs">
-                <h4 class="card-skill__header">Сертификаты</h4>
-                <div class="row card-skill-certs__item">
-                    <div class="card-skill-certs__item__bullet">
-                        <div class="card-skill-certs__item__bullet-inner"></div>
-                    </div>
-                    <div class="card-skill-certs__item__name">Сертификат специалиста Яндекс.Метрика</div>
-                    <div class="card-skill-certs__item__company">YANDEX </div>
-                    <button class="btn btn-danger btn-sm delete-item">
-                        Удалить
-                    </button>
-                </div>
-                <div class="row card-skill-certs__item">
-                    <div class="card-skill-certs__item__bullet">
-                        <div class="card-skill-certs__item__bullet-inner"></div>
-                    </div>
-                    <div class="card-skill-certs__item__name">Сертификат специалиста Яндекс.Директ</div>
-                    <div class="card-skill-certs__item__company">YANDEX </div>
-                    <button class="btn btn-danger btn-sm delete-item">
-                        Удалить
-                    </button>
-                </div>
-                <button class="btn btn-success btn-sm " id="add_cert">
-                    Добавить сертификат
-                  </button>
-            </div>
-            <div class="card-skill card-skill-courses">
-                <h4 class="card-skill__header">Курсы повышения квалификации</h4>
-                <div class="row card-skill-courses__item">
-                    <div class="card-skill-courses__item__bullet">
-                        <div class="card-skill-courses__item__bullet-inner"></div>
-                    </div>
-                    <div class="card-skill-courses__item__name">Анализ данных</div>
-                    <div class="card-skill-courses__item__company">YANDEX</div>
-                      <button class="btn btn-danger btn-sm delete-item">
-                        Удалить
-                      </button>
-                    <div class="card-skill-courses__item__description">Специалист DataScience</div>
-                </div>
-                <div class="row card-skill-courses__item">
-                    <div class="card-skill-courses__item__bullet">
-                        <div class="card-skill-courses__item__bullet-inner"></div>
-                    </div>
-                    <div class="card-skill-courses__item__name">Рзработка интерфейсов</div>
-                    <div class="card-skill-courses__item__company">YANDEX</div>
-                      <button class="btn btn-danger btn-sm delete-item">
-                        Удалить
-                      </button>
-                    <div class="card-skill-courses__item__description">Дизайнер</div>
-                </div>
-                <button class="btn btn-success btn-sm " id="add_course">
-                    Добавить курс
-                  </button>
-            </div>
-            <div class="card-skill card-skill-confs">
-                <h4 class="card-skill__header">Участие в конференциях</h4>
-                <div class="row card-skill-confs__item">
-                    <div class="card-skill-confs__item__bullet">
-                        <div class="card-skill-confs__item__bullet-inner"></div>
-                    </div>
-                    <div class="card-skill-confs__item__name">Гагаринские чтения</div>
-                    <button class="btn btn-danger btn-sm delete-item">
-                        Удалить
-                      </button>
-                    <div class="card-skill-confs__item__description">Современные алгоритмы и технологии для построения
-                        математической модели кистей рук
-                    </div>
-                </div>
-                <button class="btn btn-success btn-sm " id="add_conf">
-                    Добавить конференцию
-                  </button>
-            </div>
-            <div class="card-skill card-skill-skills">
-                <h4 class="card-skill__header">Навыки</h4>
-                <ul class="card-skill-skills__list">
-                    <li class="card-skill-skills__list__item">Python</li>
-                    <li class="card-skill-skills__list__item">Js</li>
-                    <li class="card-skill-skills__list__item">SolidWorks</li>
-                </ul>
-                <button class="btn btn-primary btn-sm " id="add_skill">
-                    Редактировать навыки
-                  </button>
-            </div>
-            <div class="card-skill card-skill-langs">
-                <h4 class="card-skill__header">Языки</h4>
-                <ul class="card-skill-langs__list">
-                    <li class="card-skill-langs__list__item">Английский — читаю профессиональную литературу</li>
-                </ul>
-                <button class="btn btn-primary btn-sm " id="change_lang">
-                  Изменить
-                </button>
-            </div>
-        </div>
-        <!-- Конец карточек навыков студента -->
+      <div class="row" style="margin-top: 15px;">
+          <div class="col-md-3">
+              <label for="inputPassword" class="control-label">Телефон</label>
+          </div>
+          <div class="col-md-9">
+              <div class="form-group">
+                  <div class="col-sm-3">
+                      <input type="tel" class="form-control " id="inputPassword" placeholder="">
+                  </div>
+              </div>
+          </div>
+      </div>
 
-    </div>
+      <div class="row" style="margin-top: 15px;">
+          <div class="col-md-3">
+              <label for="inputPassword" class="control-label">Почта</label>
+          </div>
+          <div class="col-md-9">
+              <div class="form-group">
+                  <div class="col-sm-3">
+                      <input type="email" class="form-control " id="inputPassword" placeholder="">
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="row" style="margin-top: 15px;">
+          <div class="col-md-3">
+              <label for="inputPassword" class="control-label">О себе</label>
+          </div>
+          <div class="col-md-9">
+              <textarea class="form-control vacancy-submit__info"></textarea>
+          </div>
+      </div>
+      <div class="row" style="margin-top: 15px;">
+          <div class="col-md-3">
+              <label for="inputPassword" class="control-label">Опыт работы</label>
+          </div>
+          <div class="col-md-9">
+              <textarea class="form-control vacancy-submit__info"></textarea>
+          </div>
+      </div>
+      <div class="row" style="margin-top: 15px;">
+          <div class="col-md-3">
+              <label for="inputPassword" class="control-label">Курсы повышения квалификации</label>
+          </div>
+          <div class="col-md-9">
+              <textarea class="form-control vacancy-submit__info"></textarea>
+          </div>
+      </div>
+      <div class="row" style="margin-top: 15px;">
+          <div class="col-md-3">
+              <label for="inputPassword" class="control-label">Сертификаты</label>
+          </div>
+          <div class="col-md-9">
+              <textarea class="form-control vacancy-submit__info"></textarea>
+          </div>
+      </div>
+      <div class="row" style="margin-top: 15px;">
+          <div class="col-md-3">
+              <label for="inputPassword" class="control-label">Участие в конференциях</label>
+          </div>
+          <div class="col-md-9">
+              <textarea class="form-control vacancy-submit__info"></textarea>
+          </div>
+      </div>
+      <div class="row" style="margin-top: 15px;">
+          <div class="col-md-3">
+              <label for="inputPassword" class="control-label">Навыки</label>
+          </div>
+          <div class="col-md-9">
+              <textarea class="form-control vacancy-submit__info"></textarea>
+          </div>
+      </div>
+      <div class="row" style="margin-top: 15px;">
+          <div class="col-md-3">
+              <label for="inputPassword" class="control-label">Языки</label>
+          </div>
+          <div class="col-md-9">
+              <textarea class="form-control vacancy-submit__info"></textarea>
+          </div>
+      </div>
+      <div class="row" style="margin-top: 15px;">
+          <div class="col-md-3">
+              <label for="inputPassword" class="control-label">Фон баннера</label>
+          </div>
+          <div class="col-md-9">
+              <div class="form-group">
+                  <div class="col-sm-3">
+                      <input type="file" id="inputPassword" placeholder="">
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="row" style="margin-top: 15px;">
+          <div class="col-md-3">
+              <label for="inputPassword" class="control-label">Аватар</label>
+          </div>
+          <div class="col-md-9">
+              <div class="form-group">
+                  <div class="col-sm-3">
+                      <input type="file" id="inputPassword" placeholder="">
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-offset-10 col-md-2">
+          <button type="submit" class="btn btn-primary btn-lg button-new-vacancy">
+              Обновить профиль
+              <!-- кнопка должна создавать новую вакансию, забрав данные из полей выше -->
+          </button>
 </div>
 
 <!-- Футер -->
