@@ -6,6 +6,7 @@
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 </head>
 <body>
 <!-- Шапка -->
@@ -183,13 +184,85 @@
           </div>
           <div class="col-md-9">
               <div class="form-group">
-                  <div class="col-sm-12">
-                      <input type="text" class="form-control " id="inputPassword" placeholder="">
+                  <div class="col-sm-12 input-group responce-group">
+                      <input type="text" class="form-control responce-group_input" id="inputPassword" placeholder="">
+                  		<span class='input-group-btn button-field'>
+                  		<button class="btn btn-basic responce-group_button" type="button">
+          				<i class='glyphicon glyphicon-menu-hamburger'></i>
+          				</button>
+       				   </span>
                   </div>
               </div>
           </div>
       </div>
 
+            <div class="row" style="margin-top: 15px;">
+          <div class="col-md-3">
+              <label for="inputPassword" class="control-label">Ближайшая станция метро</label>
+          </div>
+          <div class="col-md-9">
+              <div class="form-group">
+                  <div class="col-sm-12 input-group responce-group">
+                      <input type="text" class="form-control responce-group_input" id="inputPassword" placeholder="">
+                  		<span class='input-group-btn button-field'>
+                  		<button class="btn btn-basic responce-group_button" type="button">
+          				<i class='glyphicon glyphicon-menu-hamburger'></i>
+          				</button>
+       				   </span>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="row" style="margin-top: 15px;">
+      <div class="col-md-3">
+          <label for="inputPassword" class="control-label">Переезд</label>
+      </div>
+      <div class="col-md-9">
+          <div class="radio">
+              <label>
+                  <input type="radio" name="optionsRadios2" id="optionsRadios1" value="option1" checked>
+                  Невозможен
+              </label>
+          </div>
+          <div class="radio">
+              <label>
+                  <input type="radio" name="optionsRadios2" id="optionsRadios1" value="option1" checked>
+                  Возможен
+              </label>
+          </div>
+          <div class="radio">
+              <label>
+                  <input type="radio" name="optionsRadios2" id="optionsRadios1" value="option1" checked>
+                  Желателен
+              </label>
+          </div>
+      </div>
+    </div>
+          <div class="row" style="margin-top: 15px;">
+      <div class="col-md-3">
+          <label for="inputPassword" class="control-label">Готовность к командировкам</label>
+      </div>
+      <div class="col-md-9">
+          <div class="radio">
+              <label>
+                  <input type="radio" name="optionsRadios3" id="optionsRadios1" value="option1" checked>
+                  Никогда
+              </label>
+          </div>
+          <div class="radio">
+              <label>
+                  <input type="radio" name="optionsRadios3" id="optionsRadios1" value="option1" checked>
+                  Готов
+              </label>
+          </div>
+          <div class="radio">
+              <label>
+                  <input type="radio" name="optionsRadios3" id="optionsRadios1" value="option1" checked>
+                  Иногда
+              </label>
+          </div>
+      </div>
+    </div>
       <div class="row" style="margin-top: 15px;">
       <div class="col-md-3">
           <label for="inputPassword" class="control-label">Пол</label>
@@ -232,6 +305,12 @@
                   <div class="col-sm-3">
                       <input type="tel" class="form-control " id="inputPassword" placeholder="">
                   </div>
+              <div class="radio">
+              <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios5" value="option1" checked>
+                  предпочитаемый способ связи
+              </label>
+          	  	</div>
               </div>
           </div>
       </div>
@@ -245,6 +324,12 @@
                   <div class="col-sm-3">
                       <input type="email" class="form-control " id="inputPassword" placeholder="">
                   </div>
+                  <div class="radio">
+              <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios5" value="option1" checked>
+                  предпочитаемый способ связи
+              </label>
+          </div>
               </div>
           </div>
       </div>
@@ -257,6 +342,10 @@
               <textarea class="form-control vacancy-submit__info"></textarea>
           </div>
       </div>
+        <div class="container">
+          <h2 class="responses__header" style="    font-size: 22px;">Опыт работы</h2>
+
+  </div>
       <div class="row" style="margin-top: 15px;">
           <div class="col-md-3">
               <label for="inputPassword" class="control-label">Опыт работы</label>
@@ -335,7 +424,6 @@
               <!-- кнопка должна создавать новую вакансию, забрав данные из полей выше -->
           </button>
 </div>
-
 <!-- Футер -->
 <footer class="footer container">
     <img class="footer__logo" src="./img/header/mai.gif"/>
@@ -359,7 +447,11 @@
     <span>&copy; 2018 Creation All Rights Reserved</span>
 </div>
 <!-- Конец копирайта -->
+<!-- Начало Js -->
+<script type="text/babel">
 
+</script>
+<!-- Конец Js-->
 <link rel="stylesheet" href="./css/main.min.css">
 <link rel="stylesheet" href="./libs/normalize-css/normalize.css">
 <script src="js/scripts.min.js"></script>
