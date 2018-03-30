@@ -39,7 +39,8 @@ gulp.task('js', ['common-js'], function() {
 gulp.task('browser-sync', function() {
 	browserSync({
 		server: {
-			baseDir: 'app'
+			baseDir: "app",
+			index: "student_edit_exp.html"
 		},
 		notify: false,
 		// tunnel: true,
