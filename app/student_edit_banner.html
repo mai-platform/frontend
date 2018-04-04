@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8">
     <title>Профиль студента</title>
+    <script src="js/scripts.min.js"></script>
+
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
@@ -56,7 +58,6 @@
 <div class="banner">
   <div class="container">
           <h2 class="responses__header" style="    font-size: 32px;">Визитная карточка студента</h2>
-
   </div>
   <div class="container content" style="padding-top: 10px;font-family: 'OpenSans', Sans-Serif">
       <div class="row">
@@ -182,10 +183,10 @@
           <div class="col-md-3">
               <label for="inputPassword" class="control-label">Город проживания</label>
           </div>
-          <div class="col-md-9">
+          <div class="col-md-9" id="input-city">
               <div class="form-group">
                   <div class="col-sm-12 input-group responce-group">
-                      <input type="text" class="form-control responce-group_input" id="inputPassword" placeholder="">
+                      <input name="city" type="text" class="form-control responce-group_input" placeholder="">
                   		<span class='input-group-btn button-field'>
                   		<button class="btn btn-basic responce-group_button" type="button">
           				<i class='glyphicon glyphicon-menu-hamburger'></i>
@@ -318,12 +319,26 @@
 </div>
 <!-- Конец копирайта -->
 <!-- Начало Js -->
-<script type="text/babel">
+<script>
+$(function () {
+  var $city = $('[name="city"]')
+  $.kladr.setDefault({
+    limit: 4,
+    labelFormat: function (obj, query) {
+      return obj.name;
+    }
+  })
 
+  $city.kladr({
+    type: $.kladr.type.city,
+    typeCode: $.kladr.typeCode.city
+    })
+  });
 </script>
 <!-- Конец Js-->
 <link rel="stylesheet" href="./css/main.min.css">
 <link rel="stylesheet" href="./libs/normalize-css/normalize.css">
+<link rel="stylesheet" href="./libs/jquery.kladr/jquery.kladr.min.css">
 <script src="js/scripts.min.js"></script>
 </body>
 </html>
