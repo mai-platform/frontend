@@ -4,9 +4,6 @@
     <meta charset="utf-8">
     <title>Профиль студента</title>
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 </head>
 <body>
 <!-- Шапка -->
@@ -56,12 +53,13 @@
   <div class="container">
           <h2 class="responses__header" style="    font-size: 32px;">Опыт работы</h2>
   </div>
-  <div class="container content" style="padding-top: 10px;font-family: 'OpenSans', Sans-Serif">
-      <div class="row">
-          <div class="col-md-3">
-              <label for="inputPassword" class="control-label">Начало работы</label>
-          </div>
-          <div class="col-md-3">
+  <div class="container edit-container" id="content">
+    <noscript>
+        <div class="row">
+            <div class="col-md-3">
+                <label for="inputPassword" class="control-label">Начало работы</label>
+            </div>
+            <div class="col-md-3">
               <div class="form-group">
                   <div class="col-sm-12">
                       <input type="month" class="form-control " id="inputPassword" placeholder="" value="2018-04">
@@ -69,7 +67,7 @@
               </div>
           </div>
       </div>
-      <div class="row" style="margin-top: 15px;">
+      <div class="row edit-container__row">
           <div class="col-md-3">
               <label for="inputPassword" class="control-label">Окончание</label>
           </div>
@@ -81,7 +79,7 @@
               </div>
           </div>
       </div>
-      <div class="row" style="margin-top: 15px;">
+      <div class="row edit-container__row">
           <div class="col-md-3">
               <label for="inputPassword" class="control-label">Организация</label>
           </div>
@@ -94,7 +92,7 @@
           </div>
       </div>
 
-      <div class="row" style="margin-top: 15px;">
+      <div class="row edit-container__row">
           <div class="col-md-3">
               <label for="inputPassword" class="control-label">Должность</label>
           </div>
@@ -106,7 +104,7 @@
               </div>
           </div>
       </div>
-      <div class="row" style="margin-top: 15px;">
+      <div class="row edit-container__row">
           <div class="col-md-3">
               <label for="inputPassword" class="control-label">Обязанности, функции, достижения</label>
           </div>
@@ -118,16 +116,15 @@
             <div class="col-md-9 col-md-offset-3">
                 <a class="edit-profile" style="font-size: 14px" href="#">Добавить место работы</a>
             </div>
-      </div>
-  </div>
-
+        </div>   
       <div class="col-md-offset-10 col-md-2">
           <button type="submit" class="btn btn-primary btn-lg button-new-vacancy">
               Обновить профиль
               <!-- кнопка должна создавать новую вакансию, забрав данные из полей выше -->
           </button>
     </div>
-</div>
+    </noscript>
+  </div>
 <!-- Футер -->
 <footer class="footer container">
     <img class="footer__logo" src="./img/header/mai.gif"/>

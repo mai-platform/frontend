@@ -4,9 +4,7 @@
     <meta charset="utf-8">
     <title>Профиль студента</title>
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="js/component.js" type="module"></script>
 </head>
 <body>
 <!-- Шапка -->
@@ -56,9 +54,8 @@
 <div class="banner">
   <div class="container">
           <h2 class="responses__header" style="    font-size: 32px;">Обо мне</h2>
-
   </div>
-  <div class="container content" style="padding-top: 10px;font-family: 'OpenSans', Sans-Serif">
+  <div class="container content edit-container" key="">
       <div class="row" style="margin-top: 15px;">
           <div class="col-md-3">
               <label for="inputPassword" class="control-label">Дата Рождения</label>
@@ -74,15 +71,15 @@
 
       <div class="row" style="margin-top: 15px;">
           <div class="col-md-3">
-              <label for="inputPassword" class="control-label">Телефон</label>
+              <label for="inputPhone" class="control-label">Телефон</label>
           </div>
           <div class="col-md-9">
               <div class="form-group">
                   <div class="col-sm-3">
-                      <input type="tel" class="form-control " id="inputPassword" placeholder="">
+                      <input type="tel" class="form-control " id="inputPhone" placeholder="">
                   </div>
-              <div class="radio">
-              <label>
+              <div class="col-sm-9">
+              <label class="radio-inline">
                   <input type="radio" name="optionsRadios" id="optionsRadios5" value="option1" checked>
                   предпочитаемый способ связи
               </label>
@@ -93,15 +90,15 @@
 
       <div class="row" style="margin-top: 15px;">
           <div class="col-md-3">
-              <label for="inputPassword" class="control-label">Почта</label>
+              <label for="inputEmail" class="control-label">Почта</label>
           </div>
           <div class="col-md-9">
               <div class="form-group">
                   <div class="col-sm-3">
-                      <input type="email" class="form-control " id="inputPassword" placeholder="">
+                      <input type="email" class="form-control " id="inputEmail" placeholder="">
                   </div>
-                  <div class="radio">
-              <label>
+                            <div class="col-sm-9">
+          	  <label class="radio-inline">
                   <input type="radio" name="optionsRadios" id="optionsRadios5" value="option1" checked>
                   предпочитаемый способ связи
               </label>
