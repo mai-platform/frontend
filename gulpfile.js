@@ -22,6 +22,7 @@
 gulp.task('common-js', function() {
 	return gulp.src([
 		'app/js/common.js',
+		'app/js/expedit.js'
 		])
 	.pipe(concat('common.min.js'))
 	.pipe(uglify())
@@ -29,7 +30,7 @@ gulp.task('common-js', function() {
 });
 
 gulp.task('babelify', function () {
-    return browserify({entries: './app/react/app.jsx', extensions: ['.jsx'], debug: true})
+    return browserify({entries: './app/react/app_for_exp.jsx', extensions: ['.jsx'], debug: true})
         .transform('babelify', {presets: ['es2015', 'react']})
         .bundle()
         .pipe(source('expedit.js'))
@@ -42,7 +43,6 @@ gulp.task('js', ['common-js'], function() {
 		'app/libs/jquery.kladr/jquery.kladr.min.js',
 		'app/libs/bootstrap-sass/assets/javascripts/bootstrap.min.js',
 		'app/js/common.min.js', // Всегда в конце
-		'app/js/expedit.js'
 		])
 	.pipe(concat('scripts.min.js'))
 	// .pipe(uglify()) // Минимизировать весь js (на выбор)
