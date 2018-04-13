@@ -22,20 +22,28 @@
 gulp.task('common-js', function() {
 	return gulp.src([
 		'app/js/common.js',
-		'app/js/expedit.js'
 		])
 	.pipe(concat('common.min.js'))
 	.pipe(uglify())
 	.pipe(gulp.dest('app/js'));
 });
 
-gulp.task('babelify', function () {
+/*gulp.task('react-js', function() {
+	return gulp.src([
+		'app/js/expedit.js',
+		])
+	.pipe(concat('expedit.min.js'))
+	.pipe(uglify())
+	.pipe(gulp.dest('app/js'));
+});*/
+
+/*gulp.task('babelify', ['react-js'], function () {
     return browserify({entries: './app/react/app_for_exp.jsx', extensions: ['.jsx'], debug: true})
         .transform('babelify', {presets: ['es2015', 'react']})
         .bundle()
         .pipe(source('expedit.js'))
         .pipe(gulp.dest('./app/js/'));
-});
+});*/
 
 gulp.task('js', ['common-js'], function() {
 	return gulp.src([
@@ -72,10 +80,10 @@ gulp.task('sass', function() {
 	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.reload({stream: true}));
 });
-gulp.task('watch', ['sass', 'js', 'babelify', 'browser-sync'], function() {
+gulp.task('watch', ['sass', 'js'/*, 'babelify'*/, 'browser-sync'], function() {
 	gulp.watch('app/sass/**/*.sass', ['sass']);
 	gulp.watch('app/blocks/**/*.sass',['sass']);
-	gulp.watch(['app/react/*.jsx'], ['babelify']);
+	//gulp.watch(['app/react/*.jsx'], ['babelify']);
 	gulp.watch('app/libs/bootstrap-sass/assets/stylesheets/bootstrap/**/*.sass',['sass']);
 	gulp.watch('app/libs/bootstrap-sass/assets/stylesheets/bootstrap/*.sass',['sass']);
 	gulp.watch(['app/js/*.js', 'app/js/common.js'], ['js']);

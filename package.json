@@ -39,6 +39,7 @@
     "webpack-stream": "^4.0.3"
   },
   "dependencies": {
+    "angular": "^1.6.9",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "bootstrap4": "0.0.1-security",
     "gulp-babel": "^7.0.1",

@@ -1,7 +1,6 @@
 //student_edit_banner
 $(function () {
-  var $city = $('[name="city"]');
-  $("#chooseMetro").hide();
+  var $city = $('[name="city"]')
 
   $.kladr.setDefault({
     verify: true,
@@ -24,7 +23,7 @@ $(function () {
           $("#kladr_autocomplete").show();
       });
     },
-    check: function checkUnderground (obj){
+    check: function (obj){
       console.log(obj);
       if (obj!=null)
         switch (obj.id){
@@ -61,4 +60,22 @@ $(function () {
     })
   });
 //student_edit_about
+
+var expList = angular.module('expList', []);
+expList.controller('InputList', [ '$scope', function($scope){
+  $scope.workSpaces = [{startDate: new Date ("2018-04"),
+                        endDate: new Date ("2018-04"),
+                        organization: '',
+                        post: '',
+                        info: ''}]
+  $scope.addWorkSpace = function (){
+    $scope.workSpaces = $scope.workSpaces.concat([{startDate: new Date ("2018-04"), endDate: new Date ("2018-04"), organization: '', post: '', info: ''}]);
+    console.log($scope.workSpaces);
+  }
+  $scope.removeWorkSpace = function(i){
+    $scope.workSpaces = $scope.workSpaces.filter(function (dataNode, j) {
+      return i!==j; 
+    })
+  }
+}]);
 
