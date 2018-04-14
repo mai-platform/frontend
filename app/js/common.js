@@ -83,7 +83,7 @@ confsList.controller('InputList', [ '$scope', function($scope){
   $scope.confs = [{name: '',
                    about: ''}]
   $scope.addConf = function (){
-    $scope.confs = $scope.confs.concat([{name: '', about: ''}]);
+    $scope.confs = $scope.confs.concat([{name: 'лежать', about: ''}]);
   }
   $scope.removeConf = function(i){
     $scope.confs = $scope.confs.filter(function (dataNode, j) {
@@ -92,3 +92,17 @@ confsList.controller('InputList', [ '$scope', function($scope){
   }
 }]);
 
+var courcesList = angular.module('courcesList', []);
+courcesList.controller('InputList', [ '$scope', function($scope){
+  $scope.cources = [{name: '',
+                   organization: '',
+                   outputQualification: ''}]
+  $scope.addCource = function (){
+    $scope.cources = $scope.cources.concat([{name: '', organization: '', outputQualification: ''}]);
+  }
+  $scope.removeCource = function(i){
+    $scope.cources = $scope.cources.filter(function (dataNode, j) {
+      return i!==j; 
+    })
+  }
+}])

@@ -55,7 +55,7 @@
   <div class="container">
           <h2 class="responses__header" style="    font-size: 32px;">Опыт работы</h2>
   </div>
-  <div class="container edit-container" ng-controller="InputList">
+  <div class="container edit-container content" ng-controller="InputList">
   	<div ng-repeat="workSpace in workSpaces">
   		<button type="button" ng-click="removeWorkSpace($index)" ng-style="{ 'display' : (workSpaces.length == 1) ? 'none' : 'inline-block'}" class="close">&times;</button>
         <div class="row">

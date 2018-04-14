@@ -57,7 +57,7 @@
           <h2 class="responses__header" style="    font-size: 32px;">Участие в конференциях</h2>
 
   </div>
-  <div class="container edit-container" ng-controller="InputList">
+  <div class="container edit-container content" ng-controller="InputList">
     <div ng-repeat="conf in confs">
       <button type="button" ng-click="removeConf($index)" ng-style="{ 'display' : (confs.length == 1) ? 'none' : 'inline-block'}" class="close">&times;</button>
       <div class="row">
