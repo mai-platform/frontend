@@ -61,6 +61,7 @@ $(function () {
   });
 //student_edit_about
 
+//Неоптизированный код для листов
 var expList = angular.module('expList', []);
 expList.controller('InputList', [ '$scope', function($scope){
   $scope.workSpaces = [{startDate: new Date ("2018-04"),
@@ -83,7 +84,7 @@ confsList.controller('InputList', [ '$scope', function($scope){
   $scope.confs = [{name: '',
                    about: ''}]
   $scope.addConf = function (){
-    $scope.confs = $scope.confs.concat([{name: 'лежать', about: ''}]);
+    $scope.confs = $scope.confs.concat([{name: '', about: ''}]);
   }
   $scope.removeConf = function(i){
     $scope.confs = $scope.confs.filter(function (dataNode, j) {
@@ -102,6 +103,20 @@ courcesList.controller('InputList', [ '$scope', function($scope){
   }
   $scope.removeCource = function(i){
     $scope.cources = $scope.cources.filter(function (dataNode, j) {
+      return i!==j; 
+    })
+  }
+}])
+
+var sertsList = angular.module('sertsList', []);
+sertsList.controller('InputList', [ '$scope', function($scope){
+  $scope.serts = [{name: '',
+                   organization: ''}]
+  $scope.addSert = function (){
+    $scope.serts = $scope.serts.concat([{name: '', organization: ''}]);
+  }
+  $scope.removeSert = function(i){
+    $scope.serts = $scope.serts.filter(function (dataNode, j) {
       return i!==j; 
     })
   }

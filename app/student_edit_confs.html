@@ -59,7 +59,9 @@
   </div>
   <div class="container edit-container content" ng-controller="InputList">
     <div ng-repeat="conf in confs">
-      <button type="button" ng-click="removeConf($index)" ng-style="{ 'display' : (confs.length == 1) ? 'none' : 'inline-block'}" class="close">&times;</button>
+      <div class="row" style="margin-top: 25px;">
+        <button type="button" ng-click="removeConf($index)" ng-style="{ 'display' : (confs.length == 1) ? 'none' : 'inline-block'}" class="close">&times;</button>
+      </div>
       <div class="row">
           <div class="col-md-3">
               <label for="inputPassword" class="control-label">Название конференции</label>
