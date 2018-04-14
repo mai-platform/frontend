@@ -70,10 +70,23 @@ expList.controller('InputList', [ '$scope', function($scope){
                         info: ''}]
   $scope.addWorkSpace = function (){
     $scope.workSpaces = $scope.workSpaces.concat([{startDate: new Date ("2018-04"), endDate: new Date ("2018-04"), organization: '', post: '', info: ''}]);
-    console.log($scope.workSpaces);
   }
   $scope.removeWorkSpace = function(i){
     $scope.workSpaces = $scope.workSpaces.filter(function (dataNode, j) {
+      return i!==j; 
+    })
+  }
+}]);
+
+var confsList = angular.module('confsList', []);
+confsList.controller('InputList', [ '$scope', function($scope){
+  $scope.confs = [{name: '',
+                   about: ''}]
+  $scope.addConf = function (){
+    $scope.confs = $scope.confs.concat([{name: '', about: ''}]);
+  }
+  $scope.removeConf = function(i){
+    $scope.confs = $scope.confs.filter(function (dataNode, j) {
       return i!==j; 
     })
   }

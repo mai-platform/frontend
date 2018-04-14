@@ -4,9 +4,8 @@
     <meta charset="utf-8">
     <title>Профиль студента</title>
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="libs/angular/angular.min.js"></script>
+    <script src="js/scripts.min.js"></script>
 </head>
 <body>
 <!-- Шапка -->
@@ -53,12 +52,14 @@
 </nav>
 <!-- Конец шапки -->
 
-<div class="banner">
+<div class="banner" ng-app="confsList">
   <div class="container">
           <h2 class="responses__header" style="    font-size: 32px;">Участие в конференциях</h2>
 
   </div>
-  <div class="container content" style="padding-top: 10px;font-family: 'OpenSans', Sans-Serif">
+  <div class="container edit-container" ng-controller="InputList">
+    <div ng-repeat="conf in confs">
+      <button type="button" ng-click="removeConf($index)" ng-style="{ 'display' : (confs.length == 1) ? 'none' : 'inline-block'}" class="close">&times;</button>
       <div class="row">
           <div class="col-md-3">
               <label for="inputPassword" class="control-label">Название конференции</label>
@@ -66,7 +67,7 @@
           <div class="col-md-9">
               <div class="form-group">
                   <div class="col-sm-12">
-                      <input type="text" class="form-control " id="inputPassword" placeholder="">
+                      <input type="text" class="form-control " id="inputPassword" placeholder="" ng-model="conf.name">
                   </div>
               </div>
           </div>
@@ -76,20 +77,22 @@
               <label for="inputPassword" class="control-label">Тема конференции</label>
           </div>
           <div class="col-md-9">
-              <textarea class="form-control vacancy-submit__info"></textarea>
+              <textarea class="form-control vacancy-submit__info" ng-model="conf.about"></textarea>
           </div>
       </div>
       <div class="row" style="margin-top: 15px;">
             <div class="col-md-9 col-md-offset-3">
-                <a class="edit-profile" style="font-size: 14px" href="#">Добавить конференцию</a>
+                <a class="edit-profile" style="font-size: 14px; cursor: pointer;" ng-click="addConf()">Добавить конференцию</a>
             </div>
       </div>
+    </div>
       <div class="col-md-offset-10 col-md-2" style="margin-top: 20px;">
           <button type="submit" class="btn btn-primary btn-lg button-new-vacancy">
               Обновить профиль
               <!-- кнопка должна создавать новую вакансию, забрав данные из полей выше -->
           </button>
     </div>
+  </div>
 </div>
 <!-- Футер -->
 <footer class="footer container">
@@ -115,12 +118,11 @@
 </div>
 <!-- Конец копирайта -->
 <!-- Начало Js -->
-<script type="text/babel">
+<script>
 
 </script>
 <!-- Конец Js-->
 <link rel="stylesheet" href="./css/main.min.css">
 <link rel="stylesheet" href="./libs/normalize-css/normalize.css">
-<script src="js/scripts.min.js"></script>
 </body>
 </html>
