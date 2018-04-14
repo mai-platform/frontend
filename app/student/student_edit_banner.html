@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Профиль студента</title>
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <script src="js/component.js" type="module"></script>
+</head>
+<body>
+<!-- Шапка -->
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img alt="Brand" class="header__logo" src="../img/header/mai.gif">
+            </a>
+        </div>
+        <form class="navbar-form navbar-left ">
+            <div class="header-search">
+                <input type="text" class="form-control input-sm header-search__input" maxlength="64"
+                       placeholder="Я ищу..."/>
+                <button type="submit" class="btn btn-primary btn-sm header-search__button">Найти</button>
+            </div>
+        </form>
+        <div class="navbar-right header__stretch">
+            <div class="header__stretch__messages">
+                <span>2</span>
+            </div>
+            <div class="header__name">Екатерина Трифомова</div>
+            <img class="header__stretch__avatar" src="../img/student/student.jpg"/>
+        </div>
+
+    </div>
+    <div class="container-fluid" style="border-bottom: 2px solid rgba(0,0,0,0.1);"></div>
+    <div class="container">
+        <ul class="nav navbar-nav navbar-left">
+            <li><a href="#">Ищу практику</a></li>
+            <li><a href="#">Ищу работу</a></li>
+            <li><a href="#">Помощь</a></li>
+            <li><a href="#">Компании</a></li>
+        </ul>
+
+    </div>
+</nav>
+<!-- Конец шапки -->
+
+<div class="banner">
+    <div>
+        <div style="width: 100%;background:  linear-gradient(to right, #fff 0% ,#fff 50%,#fafafa 66%, #fafafa 100%);">
+
+            <div class="container">
+                <div class="edit-container content col-md-8" style="background: white">
+                <h3 class="responses__header" style="font-size: 28px;margin: 0;padding: 0">Персональная информация</h3>
+                <a href="#" class="control-back">
+                    <i class="fas fa-1x fa-chevron-left"></i>
+                    Вернуться к резюме без сохранения
+                </a>
+                <div class="col-md-12">
+                    <div class="row" style="margin-top: 15px;">
+                        <div class="col-md-4">
+                            <label for="profile_image" class="control-label">Изображение профиля</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <div class="col-sm-12"
+                                     style="display: flex;justify-content: space-around;align-items: flex-end">
+                                    <img src="../img/student/student.jpg" width="80">
+                                    <input type="file" class="control-label" id="profile_image" style="margin-left: 5px"
+                                           placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 15px;">
+                        <div class="col-md-4">
+                            <label for="background_image" class="control-label">Фоновое изображение</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <div class="col-sm-12"
+                                     style="display: flex;justify-content: space-around;align-items: flex-end">
+                                    <img src="../img/student/background.jpg" width="80">
+                                    <input type="file" class="control-label" id="background_image"
+                                           style="margin-left: 5px"
+                                           placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top: 15px;">
+                        <div class="col-md-4">
+                            <label for="first_name" class="control-label">Имя</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control " id="first_name"
+                                           placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 15px;">
+                        <div class="col-md-4">
+                            <label for="second_name" class="control-label">Фамилия</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control " id="second_name"
+                                           placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 15px;">
+                        <div class="col-md-4">
+                            <label for="third_name" class="control-label">Отчество</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control " id="third_name"
+                                           placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top: 15px;">
+                        <div class="col-md-4">
+                            <label for="birthday" class="control-label">Дата рождения</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control " id="birthday"
+                                           placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top: 15px;">
+                        <div class="col-md-4">
+                            <label for="sex" class="control-label">Пол</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <div class="col-sm-9">
+                                    <label class="control-label"><input type="radio" name="sex" value="">
+                                        Мужской</label><br>
+                                    <label class="control-label"><input type="radio" name="sex" value="">
+                                        Женский</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top: 15px;">
+                        <div class="col-md-4">
+                            <label for="city" class="control-label">Город проживания</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control " id="city"
+                                           placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top: 15px;">
+                        <div class="col-md-4">
+                            <label for="subway" class="control-label">Ближайшее метро</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control " id="subway"
+                                           placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top: 15px;">
+                        <div class="col-md-4">
+                            <label for="facultet" class="control-label">Факультет</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <div class="col-sm-9">
+                                    <select class="form-control " id="facultet">
+                                        <option>1. Факультет</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top: 15px;">
+                        <div class="col-md-4">
+                            <label for="kurs" class="control-label">Курс</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <div class="col-sm-9">
+                                    <select class="form-control " id="kurs">
+                                        <option>1 курс</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top: 15px;">
+                        <div class="col-md-4">
+                            <label for="kurs" class="control-label">Кафедра</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <div class="col-sm-9">
+                                    <select class="form-control " id="kurs">
+                                        <option>№105 Динамика полета</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top: 15px;">
+                        <div class="col-md-4">
+                            <label for="speciality" class="control-label">Специальность</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <div class="col-sm-9">
+                                      <input type="text" class="form-control " id="speciality"
+                                           placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-offset-9 col-md-2" style="margin-top: 20px;">
+                    <button type="submit" class="btn btn-primary btn-lg button-new-vacancy">
+                        Сохранить
+                    </button>
+                </div>
+
+
+            </div>
+            <div class="col-md-4">
+                <p class="control-label" style="padding: 20px">
+                    <i class="fas fa-1x fa-info-circle" style="color: green;"></i>
+                    Укажите ваши настоящие данные.
+                </p>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+<!-- Футер -->
+<footer class="footer container">
+    <img class="footer__logo" src="../img/header/mai.gif"/>
+    <ul class="footer-social">
+        <li class="footer-social__item"><a><i class="fab fa-vk"></i></a></li>
+        <li class="footer-social__item"><a><i class="fab fa-facebook-square"></i></a></li>
+        <li class="footer-social__item"><a><i class="fab fa-youtube"></i></a></li>
+        <li class="footer-social__item"><a><i class="fab fa-twitter"></i></a></li>
+        <li class="footer-social__item"><a><i class="fab fa-instagram"></i></a></li>
+        <li class="footer-social__item"><a><i class="fab fa-telegram"></i></a></li>
+    </ul>
+    <div class="footer-contacts">
+        <span class="footer-contacts__tel">8-800-555-35-35</span>
+        <span class="footer-contacts__adress">2 этаж, ГУК, Волоколамское ш.,<br/>д.4, Москва, Россия</span>
+    </div>
+</footer>
+<!-- Конец футера -->
+
+<!-- Копирайт -->
+<div class="copyright container">
+    <span>&copy; 2018 Creation All Rights Reserved</span>
+</div>
+<!-- Конец копирайта -->
+<!-- Начало Js -->
+<script type="text/babel">
+
+</script>
+<!-- Конец Js-->
+<link rel="stylesheet" href="../css/main.min.css">
+<link rel="stylesheet" href="../libs/normalize-css/normalize.css">
+<script src="../js/scripts.min.js"></script>
+</body>
+</html>

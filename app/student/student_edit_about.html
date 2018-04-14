@@ -4,9 +4,7 @@
     <meta charset="utf-8">
     <title>Профиль студента</title>
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="js/component.js" type="module"></script>
 </head>
 <body>
 <!-- Шапка -->
@@ -21,7 +19,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#">
-                <img alt="Brand" class="header__logo" src="img/header/mai.gif">
+                <img alt="Brand" class="header__logo" src="../img/header/mai.gif">
             </a>
         </div>
         <form class="navbar-form navbar-left ">
@@ -36,7 +34,7 @@
                 <span>2</span>
             </div>
             <div class="header__name">Екатерина Трифомова</div>
-            <img class="header__stretch__avatar" src="./img/student/student.jpg"/>
+            <img class="header__stretch__avatar" src="../img/student/student.jpg"/>
         </div>
 
     </div>
@@ -54,38 +52,61 @@
 <!-- Конец шапки -->
 
 <div class="banner">
-  <div class="container">
-          <h2 class="responses__header" style="    font-size: 32px;">Навыки</h2>
+    <div>
+        <div style="width: 100%;background:  linear-gradient(to right, #fff 0% ,#fff 50%,#fafafa 66%, #fafafa 100%);">
 
-  </div>
-  <div class="container content" style="padding-top: 10px;font-family: 'OpenSans', Sans-Serif">
-      <div class="row">
-          <div class="col-md-6 edit-profile_skill-list">
-          </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-        <div class="input-group">
-    <input type="text" class="form-control" placeholder="Search">
-    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
-    <div class="input-group-btn">
-      <button class="btn btn-default" type="submit">
-        <i class="glyphicon glyphicon-plus"></i>
-      </button>
-    </div>
-    </div>
-  </div>
-  </div>
-      <div class="col-md-offset-10 col-md-2">
-          <button type="submit" class="btn btn-primary btn-lg button-new-vacancy">
-              Обновить профиль
-              <!-- кнопка должна создавать новую вакансию, забрав данные из полей выше -->
-          </button>
+            <div class="container">
+                <div class="edit-container content col-md-8" style="background: white"
+                ">
+                <h3 class="responses__header" style="font-size: 28px;margin: 0;padding: 0">Обо мне</h3>
+                <a href="#" class="control-back">
+                    <i class="fas fa-1x fa-chevron-left"></i>
+                    Вернуться к резюме без сохранения
+                </a>
+                <div class="col-md-12">
+
+
+
+                    <div class="row" style="margin-top: 15px;">
+                        <div class="col-md-3">
+                            <label for="inputPassword" class="control-label">О себе</label>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <textarea class="form-control vacancy-submit__info"></textarea>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-offset-9 col-md-2" style="margin-top: 20px;">
+                    <button type="submit" class="btn btn-primary btn-lg button-new-vacancy">
+                        Сохранить
+                    </button>
+                </div>
+
+
+            </div>
+            <div class="col-md-4">
+                <p class="control-label" style="padding: 20px">
+                    <i class="fas fa-1x fa-info-circle" style="color: green;"></i>
+                    Ваше хобби, личные качества, любая дополнительная информация
+                </p>
+            </div>
+
+
+        </div>
+
     </div>
 </div>
+
 <!-- Футер -->
 <footer class="footer container">
-    <img class="footer__logo" src="./img/header/mai.gif"/>
+    <img class="footer__logo" src="../img/header/mai.gif"/>
     <ul class="footer-social">
         <li class="footer-social__item"><a><i class="fab fa-vk"></i></a></li>
         <li class="footer-social__item"><a><i class="fab fa-facebook-square"></i></a></li>
@@ -111,8 +132,8 @@
 
 </script>
 <!-- Конец Js-->
-<link rel="stylesheet" href="./css/main.min.css">
-<link rel="stylesheet" href="./libs/normalize-css/normalize.css">
-<script src="js/scripts.min.js"></script>
+<link rel="stylesheet" href="../css/main.min.css">
+<link rel="stylesheet" href="../libs/normalize-css/normalize.css">
+<script src="../js/scripts.min.js"></script>
 </body>
 </html>

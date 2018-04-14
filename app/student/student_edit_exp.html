@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Профиль студента</title>
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <script src="../libs/angular/angular.min.js"></script>
+    <script src="../js/scripts.min.js"></script>
+</head>
+<body>
+<!-- Шапка -->
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img alt="Brand" class="header__logo" src="../img/header/mai.gif">
+            </a>
+        </div>
+        <form class="navbar-form navbar-left ">
+            <div class="header-search">
+                <input type="text" class="form-control input-sm header-search__input" maxlength="64"
+                       placeholder="Я ищу..."/>
+                <button type="submit" class="btn btn-primary btn-sm header-search__button">Найти</button>
+            </div>
+        </form>
+        <div class="navbar-right header__stretch">
+            <div class="header__stretch__messages">
+                <span>2</span>
+            </div>
+            <div class="header__name">Екатерина Трифомова</div>
+            <img class="header__stretch__avatar" src="../img/student/student.jpg"/>
+        </div>
+
+    </div>
+    <div class="container-fluid" style="border-bottom: 2px solid rgba(0,0,0,0.1);"></div>
+    <div class="container">
+        <ul class="nav navbar-nav navbar-left">
+            <li><a href="#">Ищу практику</a></li>
+            <li><a href="#">Ищу работу</a></li>
+            <li><a href="#">Помощь</a></li>
+            <li><a href="#">Компании</a></li>
+        </ul>
+
+    </div>
+</nav>
+<!-- Конец шапки -->
+
+<div class="banner" ng-app="expList">
+    <div>
+        <div style="width: 100%;background:  linear-gradient(to right, #fff 0% ,#fff 50%,#fafafa 66%, #fafafa 100%);">
+
+            <div class="container">
+                <div class="edit-container content col-md-8" ng-controller="InputList" style="background: white">
+                    <h3 class="responses__header" style="font-size: 28px;margin: 0;padding: 0">Опыт работы</h3>
+                    <a href="#" class="control-back">
+                        <i class="fas fa-1x fa-chevron-left"></i>
+                        Вернуться к резюме без сохранения
+                    </a>
+                    <div class="col-md-12">
+                        <div ng-repeat="workSpace in workSpaces">
+                            <div class="row" style="height: 30px">
+                                <button type="button"  ng-click="removeWorkSpace($index)"
+                                        ng-style="{ 'display' : (workSpaces.length == 1) ? 'none' : 'inline-block'}"
+                                        class="close">
+                                   <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+
+
+                            <div class="row edit-container__row">
+                                <div class="col-md-3">
+                                    <label for="inputPassword" class="control-label">Организация</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <input type="text" class="form-control " id="inputPassword"
+                                                   ng-model="workSpace.organization">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row edit-container__row">
+                                <div class="col-md-3">
+                                    <label for="inputPassword" class="control-label">Должность</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <input type="text" class="form-control" id="inputPassword"
+                                                   ng-model="workSpace.post">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row edit-container__row">
+                                <div class="col-md-3">
+                                    <label for="inputPassword" class="control-label">Начало работы</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <input type="month" class="form-control " id="inputPassword"
+                                                   ng-model="workSpace.startDate">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row edit-container__row">
+                                <div class="col-md-3">
+                                    <label for="inputPassword" class="control-label">Окончание</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <input type="month" class="form-control " id="inputPassword"
+                                                   ng-model="workSpace.endDate">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row edit-container__row">
+                                <div class="col-md-3">
+                                    <label for="inputPassword" class="control-label">Обязанности, функции,
+                                        достижения</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <textarea class="form-control vacancy-submit__info"
+                                                      ng-model="workSpace.info"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-9 col-md-offset-3">
+                                    <a class="edit-profile" style="font-size: 14px; cursor: pointer;"
+                                       ng-click="addWorkSpace()">Добавить место работы</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                        <div class="col-md-offset-9 col-md-2" style="margin-top: 20px;">
+                            <button type="submit" class="btn btn-primary btn-lg button-new-vacancy">
+                                Сохранить
+                            </button>
+                        </div>
+
+
+                    </div>
+                    <div class="col-md-4">
+                        <p class="control-label" style="padding: 10px;padding-top: 30px">
+                            <i class="fas fa-1x fa-info-circle" style="color: green;"></i>
+                            Укажите, на какой должности вы хотите работать. Если вы готовы работать на разных
+                            должностях,
+                            создайте для каждой из них отдельное резюме.
+
+                        </p>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Футер -->
+    <footer class="footer container">
+        <img class="footer__logo" src="../img/header/mai.gif"/>
+        <ul class="footer-social">
+            <li class="footer-social__item"><a><i class="fab fa-vk"></i></a></li>
+            <li class="footer-social__item"><a><i class="fab fa-facebook-square"></i></a></li>
+            <li class="footer-social__item"><a><i class="fab fa-youtube"></i></a></li>
+            <li class="footer-social__item"><a><i class="fab fa-twitter"></i></a></li>
+            <li class="footer-social__item"><a><i class="fab fa-instagram"></i></a></li>
+            <li class="footer-social__item"><a><i class="fab fa-telegram"></i></a></li>
+        </ul>
+        <div class="footer-contacts">
+            <span class="footer-contacts__tel">8-800-555-35-35</span>
+            <span class="footer-contacts__adress">2 этаж, ГУК, Волоколамское ш.,<br/>д.4, Москва, Россия</span>
+        </div>
+    </footer>
+    <!-- Конец футера -->
+
+    <!-- Копирайт -->
+    <div class="copyright container">
+        <span>&copy; 2018 Creation All Rights Reserved</span>
+    </div>
+    <!-- Конец копирайта -->
+    <!-- Начало Js -->
+    <script type="text/javascript">
+    </script>
+    <!-- Конец Js-->
+    <link rel="stylesheet" href="../css/main.min.css">
+    <link rel="stylesheet" href="../libs/normalize-css/normalize.css">
+</body>
+</html>
