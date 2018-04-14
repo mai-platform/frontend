@@ -3,13 +3,13 @@
 <head>
     <meta charset="utf-8">
     <title>Профиль студента</title>
-    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link href="libs/font-awesome/web-fonts-with-css/css/fontawesome-all.min.css" rel="stylesheet">
     <script src="libs/angular/angular.min.js"></script>
     <script src="js/scripts.min.js"></script>
 </head>
 <body>
 <!-- Шапка -->
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" style=" z-index: 9999">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -40,66 +40,103 @@
 
     </div>
     <div class="container-fluid" style="border-bottom: 2px solid rgba(0,0,0,0.1);"></div>
-    <div class="container">
-        <ul class="nav navbar-nav navbar-left">
-            <li><a href="#">Ищу практику</a></li>
-            <li><a href="#">Ищу работу</a></li>
-            <li><a href="#">Помощь</a></li>
-            <li><a href="#">Компании</a></li>
-        </ul>
-
+    <div class="container-fluid">
+        <div class="container">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="#">Ищу практику</a></li>
+                <li><a href="#">Ищу работу</a></li>
+                <li><a href="#">Помощь</a></li>
+                <li><a href="#">Компании</a></li>
+            </ul>
+        </div>
     </div>
+
+
 </nav>
 <!-- Конец шапки -->
 
 <div class="banner" ng-app="sertsList">
-  <div class="container">
-          <h2 class="responses__header" style="    font-size: 32px;">Сертификаты</h2>
 
-  </div>
-  <div class="container edit-container content" ng-controller="InputList">
-    <div ng-repeat="sert in serts">
-      <div class="row" style="margin-top: 25px;">
-        <button type="button" ng-click="removeSert($index)" ng-style="{ 'display' : (serts.length == 1) ? 'none' : 'inline-block'}" class="close">&times;</button>
-      </div>
-      <div class="row">
-          <div class="col-md-3">
-              <label for="inputPassword" class="control-label">Название сертификата</label>
-          </div>
-          <div class="col-md-9">
-              <div class="form-group">
-                  <div class="col-sm-12">
-                      <input type="text" class="form-control " id="inputPassword" placeholder="" ng-model="sert.name">
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="row" style="margin-top: 15px;">
-          <div class="col-md-3">
-              <label for="inputPassword" class="control-label">Организация, выдавшая сертификат</label>
-          </div>
-          <div class="col-md-9">
-              <div class="form-group">
-                  <div class="col-sm-12">
-                      <input type="text" class="form-control " id="inputPassword" placeholder="" ng-model="sert.organization">
-                  </div>
-              </div>
-          </div>
-      </div>
-    </div>
-      <div class="row" style="margin-top: 15px;">
-            <div class="col-md-9 col-md-offset-3">
-                <a class="edit-profile" style="font-size: 14px; cursor: pointer;" ng-click="addSert()">Добавить сертификат</a>
+    <div>
+        <div style="width: 100%;background:  linear-gradient(to right, #fff 0% ,#fff 50%,#fafafa 66%, #fafafa 100%);">
+
+            <div class="container">
+                <div class="edit-container content col-md-8" style="background: white" ng-controller="InputList">
+                    <h3 class="responses__header" style="font-size: 28px;margin: 0;padding: 0">Сертификаты</h3>
+                    <a href="#" class="control-back">
+                        <i class="fas fa-1x fa-chevron-left"></i>
+                        Вернуться к резюме без сохранения
+                    </a>
+                    <div class="col-md-12">
+                        <div ng-repeat="sert in serts">
+                            <div class="row" style="height: 30px">
+                                <button type="button" ng-click="removeSert($index)"
+                                        ng-style="{ 'display' : (serts.length == 1) ? 'none' : 'inline-block'}"
+                                        class="close">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <label for="inputPassword" class="control-label">Название сертификата</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <input type="text" class="form-control " id="inputPassword" placeholder=""
+                                                   ng-model="sert.name">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row" style="margin-top: 15px;">
+                                <div class="col-md-5">
+                                    <label for="inputPassword" class="control-label">Организация, выдавшая
+                                        сертификат</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <input type="text" class="form-control " id="inputPassword" placeholder=""
+                                                   ng-model="sert.organization">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 15px;">
+                            <div class="col-md-9 col-md-offset-9">
+                                <a class="edit-profile" style="font-size: 14px; cursor: pointer;" ng-click="addSert()">Добавить
+                                    сертификат</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-offset-9 col-md-2" style="margin-top: 20px;">
+                        <button type="submit" class="btn btn-primary btn-lg button-new-vacancy">
+                            Сохранить
+                        </button>
+                    </div>
+
+
+                </div>
+                <div class="col-md-4">
+                    <p class="control-label" style="padding: 20px">
+                       <i class="fas fa-1x fa-info-circle" style="color: green;"></i>
+                        Добавьте несколько своих сертификатов, или сертификатов о повышении квалификации
+                    </p>
+                </div>
+
+
             </div>
-      </div>
-      <div class="col-md-offset-10 col-md-2" style="margin-top: 20px;">
-          <button type="submit" class="btn btn-primary btn-lg button-new-vacancy">
-              Обновить профиль
-              <!-- кнопка должна создавать новую вакансию, забрав данные из полей выше -->
-          </button>
+
+        </div>
     </div>
-    </div>
-  </div>
+</div>
 <!-- Футер -->
 <footer class="footer container">
     <img class="footer__logo" src="./img/header/mai.gif"/>
