@@ -122,7 +122,15 @@ sertsList.controller('InputList', [ '$scope', function($scope){
   }
 }])
 
-var tagInput = angular.module('tagInput', []);
-tagInput.controller('Input', [ '$scope', function($scope){
-
+var tagInput = angular.module('tagInput', ['ngTagsInput']);
+tagInput.controller('Input', [ '$scope','$http', function($scope, $http){
+                $scope.skills = [];
+                $scope.loadSkills = function($query) {
+                     return $http.get('../js/json/skills.json').then(function (skills) {
+                      var skills = skills.data;
+                      return skills.filter(function(skill) {
+                              return skill.toLowerCase().indexOf($query.toLowerCase()) != -1;
+                        });
+                     });
+                };
 }]);

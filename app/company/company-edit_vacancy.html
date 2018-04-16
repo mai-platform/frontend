@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="tagInput">
 <head>
     <meta charset="utf-8">
     <title>Вакансии компании</title>
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ng-tags-input/3.2.0/ng-tags-input.bootstrap.min.css">
+    <link rel="stylesheet" href="http://mbenford.github.io/ngTagsInput/css/ng-tags-input.min.css" />
 </head>
 <body>
 <!-- Шапка -->
@@ -160,18 +160,89 @@
                         </div>
                     </div>
 					
-					<div class="row" ng-app='tagInput' style="margin-top: 15px;">
+					<div class="row" style="margin-top: 15px;">
                     	<div class="col-md-4">
                         	<label for="skills" class="control-label">Ключевые навыки</label>
                     	</div>
                    		<div class="col-md-8">
-                     		<div class="form-group" ng-controller='Input'>
-                            	<div class="col-sm-9">
-                                	<tag-input type="text" class="form-control" placeholder="Введите навык и нажмите 'Enter'" id="skills"></tag-input>
+                     		<div class="form-group">
+                            	<div class="col-sm-9" ng-controller="Input">
+    								<tags-input class="bootstrap"
+                						ng-model="skills"
+                						placeholder="Введите навык и нажмите 'Enter'"
+                						replace-spaces-with-dashes="false">
+      										<auto-complete source="loadSkills($query)"
+                     							min-length="0"
+                     							debounce-delay="0"
+                     							max-results="10">
+                     						</auto-complete>
+    								</tags-input>
                             	</div>
                         	</div>
                     	</div>
                		</div>
+               		<div class="row" style="margin-top: 15px;">
+                        <div class="col-md-4">
+                            <label for="workTime" class="control-label">График работы</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <div class="col-sm-9">
+                                	<div class="radio">
+                                    <label class="control-label"><input type="radio" name="workTime" value="">
+                                        Полный день</label>
+                                    </div>
+                                    <div class="radio">
+                                    <label class="control-label"><input type="radio" name="workTime" value="">
+                                        Сменный график</label>
+                                    </div>
+                                    <div class="radio">
+                                    <label class="control-label"><input type="radio" name="workTime" value="">
+                                        Гибкий график</label>
+                                    </div>
+                                    <div class="radio">
+                                    <label class="control-label"><input type="radio" name="workTime" value="">
+                                        Удаленная работа</label>
+                                    </div>
+                                    <div class="radio">
+                                    <label class="control-label"><input type="radio" name="workTime" value="">
+                                        Вахтовый метод</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 15px;">
+                        <div class="col-md-4">
+                            <label for="workTime" class="control-label">Тип занятости</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <div class="col-sm-9">
+                                	<div class="radio">
+                                    <label class="control-label"><input type="radio" name="workTime" value="">
+                                        Полная занятость</label>
+                                    </div>
+                                    <div class="radio">
+                                    <label class="control-label"><input type="radio" name="workTime" value="">
+                                        Частичная занятость</label>
+                                    </div>
+                                    <div class="radio">
+                                    <label class="control-label"><input type="radio" name="workTime" value="">
+                                        Проектная/Временная работа</label>
+                                    </div>
+                                    <div class="radio">
+                                    <label class="control-label"><input type="radio" name="workTime" value="">
+                                        Волонтерство</label>
+                                    </div>
+                                    <div class="radio">
+                                    <label class="control-label"><input type="radio" name="workTime" value="">
+                                        Стажировка</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 <div class="col-md-offset-9 col-md-2" style="margin-top: 20px;">
                     <button type="submit" class="btn btn-primary btn-lg button-new-vacancy">
