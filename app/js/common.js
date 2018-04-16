@@ -121,3 +121,8 @@ sertsList.controller('InputList', [ '$scope', function($scope){
     })
   }
 }])
+
+var tagInput = angular.module('tagInput', []);
+tagInput.controller('Input', [ '$scope', function($scope){
+
+}]);
