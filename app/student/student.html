@@ -28,14 +28,26 @@
                 <button type="submit" class="btn btn-primary btn-sm header-search__button">Найти</button>
             </div>
         </form>
+
         <div class="navbar-right header__stretch">
             <div class="header__stretch__messages">
                 <span>2</span>
             </div>
-            <div class="header__name">Екатерина Трифомова</div>
-            <img class="header__stretch__avatar" src="../img/student/student.jpg"/>
+            <div class="dropdown">
+            	<button class="btn btn-default dropdown-toggle header__stretch__dropdown-button" type="button" data-toggle="dropdown">
+            		<div class="header__name">Екатерина Трифомова</div>
+            		<img class="header__stretch__avatar" src="../img/student/student.jpg"/>
+            		<span class="caret"></span>
+           		</button>
+           		<ul class="dropdown-menu">
+    				<li><a href="#">Профиль</a></li>
+    				<li><a href="#">Еще один пункт</a></li>
+    				<li><a href="#">И еще один</a></li>
+    				<li class="divider"></li>
+    				<li><a href="#">Выход</a></li>
+  				</ul>
         </div>
-
+</div>
     </div>
     <div class="container-fluid" style="border-bottom: 2px solid rgba(0,0,0,0.1);"></div>
     <div class="container">
