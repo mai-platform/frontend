@@ -27,17 +27,35 @@
       border-radius: 0
       border: none;
       background: none;
+      &:hover
+        text-decoration: none
       span
         margin-left: 5px !important
         margin-right: 5px !important
     &__messages
-      background-color: #ff332e
-      color: #FFF
       height: 30px
       width: 30px
       padding-top: 3px
       padding-left: 7px
       font-size: 10px
+      display: flex
+      font-size: 20px
+      i
+        color: #0069ff
+      &:hover
+        text-decoration: none
+      &__count
+        font-size: 12px
+        background-color: red
+        color: #fff
+        position: relative !important
+        top: -10px !important
+        left: -10px
+        min-width: 0px
+        display: flex
+        justify-content: center
+        padding-left: 9px
+        padding-right: 9px
     &__logo
       height: 30px
       width: 30px

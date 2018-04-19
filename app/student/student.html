@@ -30,15 +30,25 @@
         </form>
 
         <div class="navbar-right header__stretch">
-            <div class="header__stretch__messages">
-                <span>2</span>
+        	<div class="dropdown">
+            	<div class="header__stretch__messages btn btn-link" dropdown-toggle header__stretch__dropdown-button" data-toggle="dropdown">
+                	<i class="fas fa-flag"></i>
+                	<span class="badge header__stretch__messages__count">3</span>
+            	</div>
+            	<ul class="dropdown-menu">
+    				<li><a href="#">Профиль</a></li>
+    				<li><a href="#">Еще один пункт</a></li>
+    				<li><a href="#">И еще один</a></li>
+    				<li class="divider"></li>
+    				<li><a href="#">Выход</a></li>
+  				</ul>
             </div>
             <div class="dropdown">
-            	<button class="btn btn-default dropdown-toggle header__stretch__dropdown-button" type="button" data-toggle="dropdown">
+            	<div class="btn btn-link dropdown-toggle header__stretch__dropdown-button" data-toggle="dropdown">
             		<div class="header__name">Екатерина Трифомова</div>
             		<img class="header__stretch__avatar" src="../img/student/student.jpg"/>
             		<span class="caret"></span>
-           		</button>
+           		</div>
            		<ul class="dropdown-menu">
     				<li><a href="#">Профиль</a></li>
     				<li><a href="#">Еще один пункт</a></li>
