@@ -42,6 +42,43 @@
       font-size: 20px
       i
         color: #0069ff
+      &-list
+        padding-top: 0px
+        padding-bottom: 0px
+        width: 300px
+        border-radius: 0px
+        &__title
+          font-weight: bold
+          padding: 4px
+          font-size: 12px
+          background-color: #ffffff
+          border-bottom: 1px solid #dddddd
+        &__content
+          overflow: scroll
+          overflow-x: hidden
+          height: 200px
+          &__node
+            padding-top: 11px
+            width: 100%
+            cursor: pointer
+            border-collapse: collapse
+            margin-top: 0 !important
+            h4
+              font-size: 14px
+            p
+              font-size: 12px
+            span
+              font-size: 10px
+              float: right
+              color: #aaa
+
+        &__footer
+          background-color: #e9eaed;
+          text-align: center;
+          font-weight: bold;
+          padding: 4px;
+          font-size: 12px;
+          border-top: 1px solid #dddddd;
       &:hover
         text-decoration: none
       &__count
