@@ -134,3 +134,17 @@ tagInput.controller('Input', [ '$scope','$http', function($scope, $http){
                      });
                 };
 }]);
+
+var autoComplete = angular.module('autoComplete',['ui.bootstrap']);
+autoComplete.controller('Complete', ['$scope','$http', function($scope, $http){
+                    $scope.cityName = "";
+                    $scope.getRequest = function($query) {
+                      console.log($query );
+                    return $http.get('../js/json/city.json', [["2":$query]]).then(function (skills) {
+                      console.log(skills);
+                      return skills.data.filter(function(skill) {
+                              return skill.toLowerCase().indexOf($query.toLowerCase()) != -1;
+                        });
+                     });
+                };
+}])

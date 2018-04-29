@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <title>Профиль студента</title>
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-    <script src="js/component.js" type="module"></script>
+    <script src="../libs/angular/angular.min.js"></script>
+    <script src="../libs/angular/ui-bootstrap-tpls-2.5.0.min.js"></script>
+    <script src="../js/scripts.min.js"></script>
 </head>
 <body>
 <!-- Шапка -->
@@ -165,15 +167,15 @@
                         </div>
                     </div>
 
-                    <div class="row" style="margin-top: 15px;">
+                    <div class="row typehead" ng-app="autoComplete" ng-controller="Complete" style="margin-top: 15px;">
                         <div class="col-md-4">
                             <label for="city" class="control-label">Город проживания</label>
                         </div>
                         <div class="col-md-8">
                             <div class="form-group">
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control " id="city"
-                                           placeholder="">
+                                    <input type="text" class="form-control" id="city"
+                                           placeholder="" ng-model="cityName" uib-typeahead="value for value in getRequest($viewValue)">
                                 </div>
                             </div>
                         </div>
@@ -187,7 +189,7 @@
                             <div class="form-group">
                                 <div class="col-sm-9">
                                     <input type="text" class="form-control " id="subway"
-                                           placeholder="">
+                                           placeholder=""></input>
                                 </div>
                             </div>
                         </div>
@@ -306,6 +308,5 @@
 <!-- Конец Js-->
 <link rel="stylesheet" href="../css/main.min.css">
 <link rel="stylesheet" href="../libs/normalize-css/normalize.css">
-<script src="../js/scripts.min.js"></script>
 </body>
 </html>
