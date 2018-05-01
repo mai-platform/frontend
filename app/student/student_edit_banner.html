@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="autoComplete">
 <head>
     <meta charset="utf-8">
     <title>Профиль студента</title>
@@ -7,6 +7,7 @@
     <script src="../libs/angular/angular.min.js"></script>
     <script src="../libs/angular/ui-bootstrap-tpls-2.5.0.min.js"></script>
     <script src="../js/scripts.min.js"></script>
+    <script src="../libs/jquery.kladr/jquery.kladr.min.js"></script>
 </head>
 <body>
 <!-- Шапка -->
@@ -167,21 +168,23 @@
                         </div>
                     </div>
 
-                    <div class="row typehead" ng-app="autoComplete" ng-controller="Complete" style="margin-top: 15px;">
+                    
+                    <div class="row typehead" ng-controller="CompleteCity" style="margin-top: 15px;">
                         <div class="col-md-4">
                             <label for="city" class="control-label">Город проживания</label>
                         </div>
                         <div class="col-md-8">
                             <div class="form-group">
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="city"
-                                           placeholder="" ng-model="cityName" uib-typeahead="value for value in getRequest($viewValue)">
+                                    <input type="text" ng-model="cityName" class="form-control" id="city"
+                                           placeholder=""">
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="row" style="margin-top: 15px;">
+                    {{tether.isHaveSubway}}
+                    <div ng-controller="CompleteSubway">
+                    <div class="row" ng-if="tether.isHaveSubway" style="margin-top: 15px;">
                         <div class="col-md-4">
                             <label for="subway" class="control-label">Ближайшее метро</label>
                         </div>
@@ -193,6 +196,7 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
                     </div>
 
                     <div class="row" style="margin-top: 15px;">
@@ -307,6 +311,7 @@
 </script>
 <!-- Конец Js-->
 <link rel="stylesheet" href="../css/main.min.css">
+<link href="../libs/jquery.kladr/jquery.kladr.min.css" rel="stylesheet">
 <link rel="stylesheet" href="../libs/normalize-css/normalize.css">
 </body>
 </html>

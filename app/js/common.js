@@ -1,64 +1,4 @@
 //student_edit_banner
-$(function () {
-  var $city = $('[name="city"]')
-
-  $.kladr.setDefault({
-    verify: true,
-    limit: 200,
-    spinner: false,
-    labelFormat: function (obj, query) {
-      return obj.name;
-    }
-  })
-
-
-  $city.kladr({
-    type: $.kladr.type.city,
-    typeCode: $.kladr.typeCode.city,
-    sendBefore: function (query) {
-      $.kladr.api(query, function (callback) {
-        if (callback.length == 0)
-          $("#kladr_autocomplete").hide();
-        else
-          $("#kladr_autocomplete").show();
-      });
-    },
-    check: function (obj){
-      console.log(obj);
-      if (obj!=null)
-        switch (obj.id){
-          case '7700000000000'://МСК
-            $("#chooseMetro").show();
-            break;
-          case '7800000000000'://СПБ
-            $("#chooseMetro").show();
-            break;
-          case '3400000100000'://ВЛД
-            $("#chooseMetro").show();
-            break;
-          case '1600000100000'://КЗ
-            $("#chooseMetro").show();
-            break;
-          case '5400000100000'://НСК
-            $("#chooseMetro").show();
-            break;
-          case '6600000100000'://ЕКБ
-            $("#chooseMetro").show();
-            break;
-          case '5200000100000'://НН
-            $("#chooseMetro").show();
-            break;
-          case '6300000100000'://САМ
-            $("#chooseMetro").show();
-            break;
-          default:
-            $("#chooseMetro").hide();
-        }
-      else
-          $("#chooseMetro").hide();
-    }
-    })
-  });
 //student_edit_about
 
 //Неоптизированный код для листов
@@ -124,27 +64,55 @@ sertsList.controller('InputList', [ '$scope', function($scope){
 
 var tagInput = angular.module('tagInput', ['ngTagsInput']);
 tagInput.controller('Input', [ '$scope','$http', function($scope, $http){
-                $scope.skills = [];
-                $scope.loadSkills = function($query) {
-                     return $http.get('../js/json/skills.json').then(function (skills) {
-                      var skills = skills.data;
-                      return skills.filter(function(skill) {
-                              return skill.toLowerCase().indexOf($query.toLowerCase()) != -1;
-                        });
-                     });
-                };
+  $scope.skills = [];
+  $scope.loadSkills = function($query) {
+    return $http.get('../js/json/skills.json').then(function (skills) {
+      var skills = skills.data;
+          return skills.filter(function(skill) {
+              return skill.toLowerCase().indexOf($query.toLowerCase()) != -1;
+            });
+          });
+      };
 }]);
 
 var autoComplete = angular.module('autoComplete',['ui.bootstrap']);
-autoComplete.controller('Complete', ['$scope','$http', function($scope, $http){
-                    $scope.cityName = "";
-                    $scope.getRequest = function($query) {
-                      console.log($query );
-                    return $http.get('../js/json/city.json', [["2":$query]]).then(function (skills) {
-                      console.log(skills);
-                      return skills.data.filter(function(skill) {
-                              return skill.toLowerCase().indexOf($query.toLowerCase()) != -1;
-                        });
-                     });
-                };
+autoComplete.value('$tether', {
+  isHaveSubway: false
+});
+autoComplete.controller('CompleteCity', ['$scope','$http','$tether', function($scope, $http,$tether){
+  $scope.tether = $tether;
+  $scope.cityName = "";
+
+  $scope.$watch("cityName", function(value){
+      console.log(value);
+    if (value == "Москва")
+      $tether.isHaveSubway = true;
+    else $tether.isHaveSubway = false;
+  });
+
+  var $city = $('#city')
+  $.kladr.setDefault({
+    verify: true,
+    limit: 200,
+    spinner: false,
+    labelFormat: function (obj, query) {
+      return obj.name;
+    }
+  })
+  $city.kladr({
+    type: $.kladr.type.city,
+    typeCode: $.kladr.typeCode.city,
+    sendBefore: function (query) {
+      $.kladr.api(query, function (callback) {
+        if (callback.length == 0)
+          $("#kladr_autocomplete").hide();
+        else
+          $("#kladr_autocomplete").show();
+      });
+    },
+    })
+}])
+autoComplete.controller('CompleteSubway', ['$scope','$http','$tether', function($scope, $http,$tether){
+  $scope.tether = $tether;
+  console.log($tether);
 }])
