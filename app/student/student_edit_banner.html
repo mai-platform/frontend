@@ -7,7 +7,8 @@
     <script src="../libs/angular/angular.min.js"></script>
     <script src="../libs/angular/ui-bootstrap-tpls-2.5.0.min.js"></script>
     <script src="../js/scripts.min.js"></script>
-    <script src="../libs/jquery.kladr/jquery.kladr.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/suggestions-jquery@17.12.0/dist/js/jquery.suggestions.min.js"></script>
 </head>
 <body>
 <!-- Шапка -->
@@ -182,7 +183,6 @@
                             </div>
                         </div>
                     </div>
-                    {{tether.isHaveSubway}}
                     <div ng-controller="CompleteSubway">
                     <div class="row" ng-if="tether.isHaveSubway" style="margin-top: 15px;">
                         <div class="col-md-4">
@@ -311,7 +311,7 @@
 </script>
 <!-- Конец Js-->
 <link rel="stylesheet" href="../css/main.min.css">
-<link href="../libs/jquery.kladr/jquery.kladr.min.css" rel="stylesheet">
 <link rel="stylesheet" href="../libs/normalize-css/normalize.css">
+<link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@17.12.0/dist/css/suggestions.min.css" type="text/css" rel="stylesheet" />
 </body>
 </html>

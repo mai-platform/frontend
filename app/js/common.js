@@ -75,7 +75,7 @@ tagInput.controller('Input', [ '$scope','$http', function($scope, $http){
       };
 }]);
 
-var autoComplete = angular.module('autoComplete',['ui.bootstrap']);
+var autoComplete = angular.module('autoComplete',[]);
 autoComplete.value('$tether', {
   isHaveSubway: false
 });
@@ -90,27 +90,35 @@ autoComplete.controller('CompleteCity', ['$scope','$http','$tether', function($s
     else $tether.isHaveSubway = false;
   });
 
-  var $city = $('#city')
-  $.kladr.setDefault({
-    verify: true,
-    limit: 200,
-    spinner: false,
-    labelFormat: function (obj, query) {
-      return obj.name;
-    }
-  })
-  $city.kladr({
-    type: $.kladr.type.city,
-    typeCode: $.kladr.typeCode.city,
-    sendBefore: function (query) {
-      $.kladr.api(query, function (callback) {
-        if (callback.length == 0)
-          $("#kladr_autocomplete").hide();
-        else
-          $("#kladr_autocomplete").show();
-      });
-    },
-    })
+  var $city = $('#city');
+    $city.suggestions({
+        token: "43ce5d34b9c8e768d0396b434ac7fded92ee3ee5",
+        type: "ADDRESS",
+        count: 5,
+        addon: "none",
+        hint: false,
+        minChars: 2,
+        noCache: true,
+        noSuggestionsHint: false,
+        bounds: "city",
+        deferRequestBy: 250,
+        onSearchComplete: function (query, suggestions) {
+          var cityNames = suggestions.map(function(suggestion){
+            return suggestion.data.city;
+          });
+          console.log(cityNames);
+          console.log(suggestions);
+        },
+        formatResult: function (value, currentValue, suggestion, options) {
+          value = suggestion.data.city;
+          return suggestion.data.city;
+        },
+        onSelect: function (suggestion) {},
+        formatSelected: function (suggestion) {
+          return suggestion.data.city;
+        },
+        onInvalidateSelection: function (suggestion) {}
+    });
 }])
 autoComplete.controller('CompleteSubway', ['$scope','$http','$tether', function($scope, $http,$tether){
   $scope.tether = $tether;
