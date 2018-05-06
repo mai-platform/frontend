@@ -83,6 +83,11 @@ autoComplete.controller('CompleteCity', ['$scope','$http','$tether', function($s
   $scope.tether = $tether;
   $scope.cityName = "";
 
+  function formatOutput(suggestion){
+          var refine = (suggestion.data.capital_marker == "0" && suggestion.data.fias_level == "4") ? " (" + suggestion.data.region_with_type + ")" : "";
+          return suggestion.data.city + refine;
+  }
+
   $scope.$watch("cityName", function(value){
       console.log(value);
     if (value == "Москва")
@@ -103,21 +108,17 @@ autoComplete.controller('CompleteCity', ['$scope','$http','$tether', function($s
         bounds: "city",
         deferRequestBy: 250,
         onSearchComplete: function (query, suggestions) {
-          var cityNames = suggestions.map(function(suggestion){
-            return suggestion.data.city;
+          suggestions.forEach(function (suggestion, i) {
+            suggestion.value = formatOutput(suggestion);
           });
-          console.log(cityNames);
-          console.log(suggestions);
+          return suggestions;
         },
         formatResult: function (value, currentValue, suggestion, options) {
-          value = suggestion.data.city;
-          return suggestion.data.city;
+          return formatOutput(suggestion);
         },
-        onSelect: function (suggestion) {},
         formatSelected: function (suggestion) {
-          return suggestion.data.city;
-        },
-        onInvalidateSelection: function (suggestion) {}
+          return formatOutput(suggestion);
+        }
     });
 }])
 autoComplete.controller('CompleteSubway', ['$scope','$http','$tether', function($scope, $http,$tether){
