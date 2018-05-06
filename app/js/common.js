@@ -88,10 +88,9 @@ autoComplete.controller('CompleteCity', ['$scope','$http','$tether', function($s
           return suggestion.data.city + refine;
   }
 
-  $scope.$watch("cityName", function(value){
-      console.log(value);
-    if (value == "Москва")
-      $tether.isHaveSubway = true;
+  $scope.watchCity = ("cityName", function(value){
+        if (value == "Москва")
+    $tether.isHaveSubway = true;
     else $tether.isHaveSubway = false;
   });
 
@@ -117,6 +116,7 @@ autoComplete.controller('CompleteCity', ['$scope','$http','$tether', function($s
           return formatOutput(suggestion);
         },
         formatSelected: function (suggestion) {
+          $scope.watchCity(formatOutput(suggestion));
           return formatOutput(suggestion);
         }
     });
