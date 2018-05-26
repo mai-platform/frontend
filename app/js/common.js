@@ -2,78 +2,78 @@
 //student_edit_about
 
 //Неоптизированный код для листов
-var expList = angular.module('expList', []);
-expList.controller('InputList', [ '$scope', function($scope){
-  $scope.workSpaces = [{startDate: new Date ("2018-04"),
-                        endDate: new Date ("2018-04"),
-                        organization: '',
-                        post: '',
-                        info: ''}]
-  $scope.addWorkSpace = function (){
-    $scope.workSpaces = $scope.workSpaces.concat([{startDate: new Date ("2018-04"), endDate: new Date ("2018-04"), organization: '', post: '', info: ''}]);
-  }
-  $scope.removeWorkSpace = function(i){
-    $scope.workSpaces = $scope.workSpaces.filter(function (dataNode, j) {
-      return i!==j; 
-    })
-  }
-}]);
+// var expList = angular.module('expList', []);
+// expList.controller('InputList', [ '$scope', function($scope){
+//   $scope.workSpaces = [{startDate: new Date ("2018-04"),
+//                         endDate: new Date ("2018-04"),
+//                         organization: '',
+//                         post: '',
+//                         info: ''}]
+//   $scope.addWorkSpace = function (){
+//     $scope.workSpaces = $scope.workSpaces.concat([{startDate: new Date ("2018-04"), endDate: new Date ("2018-04"), organization: '', post: '', info: ''}]);
+//   }
+//   $scope.removeWorkSpace = function(i){
+//     $scope.workSpaces = $scope.workSpaces.filter(function (dataNode, j) {
+//       return i!==j; 
+//     })
+//   }
+// }]);
 
-var confsList = angular.module('confsList', []);
-confsList.controller('InputList', [ '$scope', function($scope){
-  $scope.confs = [{name: '',
-                   about: ''}]
-  $scope.addConf = function (){
-    $scope.confs = $scope.confs.concat([{name: '', about: ''}]);
-  }
-  $scope.removeConf = function(i){
-    $scope.confs = $scope.confs.filter(function (dataNode, j) {
-      return i!==j; 
-    })
-  }
-}]);
+// var confsList = angular.module('confsList', []);
+// confsList.controller('InputList', [ '$scope', function($scope){
+//   $scope.confs = [{name: '',
+//                    about: ''}]
+//   $scope.addConf = function (){
+//     $scope.confs = $scope.confs.concat([{name: '', about: ''}]);
+//   }
+//   $scope.removeConf = function(i){
+//     $scope.confs = $scope.confs.filter(function (dataNode, j) {
+//       return i!==j; 
+//     })
+//   }
+// }]);
 
-var courcesList = angular.module('courcesList', []);
-courcesList.controller('InputList', [ '$scope', function($scope){
-  $scope.cources = [{name: '',
-                   organization: '',
-                   outputQualification: ''}]
-  $scope.addCource = function (){
-    $scope.cources = $scope.cources.concat([{name: '', organization: '', outputQualification: ''}]);
-  }
-  $scope.removeCource = function(i){
-    $scope.cources = $scope.cources.filter(function (dataNode, j) {
-      return i!==j; 
-    })
-  }
-}])
+// var courcesList = angular.module('courcesList', []);
+// courcesList.controller('InputList', [ '$scope', function($scope){
+//   $scope.cources = [{name: '',
+//                    organization: '',
+//                    outputQualification: ''}]
+//   $scope.addCource = function (){
+//     $scope.cources = $scope.cources.concat([{name: '', organization: '', outputQualification: ''}]);
+//   }
+//   $scope.removeCource = function(i){
+//     $scope.cources = $scope.cources.filter(function (dataNode, j) {
+//       return i!==j; 
+//     })
+//   }
+// }])
 
-var sertsList = angular.module('sertsList', []);
-sertsList.controller('InputList', [ '$scope', function($scope){
-  $scope.serts = [{name: '',
-                   organization: ''}]
-  $scope.addSert = function (){
-    $scope.serts = $scope.serts.concat([{name: '', organization: ''}]);
-  }
-  $scope.removeSert = function(i){
-    $scope.serts = $scope.serts.filter(function (dataNode, j) {
-      return i!==j; 
-    })
-  }
-}])
+// var sertsList = angular.module('sertsList', []);
+// sertsList.controller('InputList', [ '$scope', function($scope){
+//   $scope.serts = [{name: '',
+//                    organization: ''}]
+//   $scope.addSert = function (){
+//     $scope.serts = $scope.serts.concat([{name: '', organization: ''}]);
+//   }
+//   $scope.removeSert = function(i){
+//     $scope.serts = $scope.serts.filter(function (dataNode, j) {
+//       return i!==j; 
+//     })
+//   }
+// }])
 
-var tagInput = angular.module('tagInput', ['ngTagsInput']);
-tagInput.controller('Input', [ '$scope','$http', function($scope, $http){
-  $scope.skills = [];
-  $scope.loadSkills = function($query) {
-    return $http.get('../js/json/skills.json').then(function (skills) {
-      var skills = skills.data;
-          return skills.filter(function(skill) {
-              return skill.toLowerCase().indexOf($query.toLowerCase()) != -1;
-            });
-          });
-      };
-}]);
+// var tagInput = angular.module('tagInput', ['ngTagsInput']);
+// tagInput.controller('Input', [ '$scope','$http', function($scope, $http){
+//   $scope.skills = [];
+//   $scope.loadSkills = function($query) {
+//     return $http.get('../js/json/skills.json').then(function (skills) {
+//       var skills = skills.data;
+//           return skills.filter(function(skill) {
+//               return skill.toLowerCase().indexOf($query.toLowerCase()) != -1;
+//             });
+//           });
+//       };
+// }]);
 
 var autoComplete = angular.module('autoComplete',[]);
 autoComplete.value('$tether', {
@@ -123,49 +123,5 @@ autoComplete.controller('CompleteCity', ['$scope','$http','$tether', function($s
 }])
 autoComplete.controller('CompleteSubway', ['$scope','$http','$tether', function($scope, $http,$tether){
   $scope.tether = $tether;
-  var $subway = $('#subway');
-  $subway.autocomplete({
-    source: function (request, responce) {
-        var query = request.term;
-        $.ajax({
-          url:"https://api.hh.ru/metro/1",
-          dataType: "json",
-          success: function(data, textStatus, request) {
-            var stations = new Array();
-            data.lines.forEach(function(line, i){
-              line.stations.forEach(function(station, j){
-                stations.push({
-                    name: station.name,
-                    color: line.hex_color
-                });
-              });
-            });
-            stations = stations.filter(function(station) {
-              return station.name.toLowerCase().indexOf(query.toLowerCase()) != -1;
-            });
-            stations = stations.sort(function (a, b) {
-              if (a.name.toLowerCase().indexOf(query.toLowerCase()) > b.name.toLowerCase().indexOf(query.toLowerCase()))
-                return 1;
-              if (a.name.toLowerCase().indexOf(query.toLowerCase()) < b.name.toLowerCase().indexOf(query.toLowerCase()))
-                return -1;
-              return 0;
-            });
-            responce(stations.slice(0,4));
-          }
-        });
-    },
-    select: function( event, ui ) {
-        console.log(ui.item.name);
-        $('#subway').val(ui.item.name);
-        return false;
-    },
-    focus: function( event, ui ) {
-        return false;
-    },
-    autoFocus: true
-  }).autocomplete( "instance" )._renderItem = function (ul, station) {
-      return $( "<li class='ui-menu-item'>" )
-        .append( "<div class='ui-menu-item-wrapper'>" + "<i class='fas fa-circle' style='color:#" + station.color +"'></i>" + " " + station.name + "</div>")
-        .appendTo( ul );
-  }
+
 }])

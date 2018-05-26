@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html ng-app="autoComplete">
+<html>
 <head>
     <meta charset="utf-8">
     <title>Профиль студента</title>
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../libs/jquery/dist/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="../libs/jquery/dist/jquery-ui.theme.min.css">
-    <script src="../libs/angular/angular.min.js"></script>
     <script src="../js/scripts.min.js"></script>
-    <script src="../libs/jquery/dist/jquery-ui.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/suggestions-jquery@18.3.3/dist/js/jquery.suggestions.min.js"></script>
+    <script src="../libs/jquery/dist/jquery-ui.min.js"></script>
+    <script src="../js/city.js"></script>
+    <script src="../js/subway.js"></script>
 </head>
 <body>
 <!-- Шапка -->
@@ -171,21 +172,20 @@
                     </div>
 
                     
-                    <div class="row" ng-controller="CompleteCity" style="margin-top: 15px;">
+                    <div class="row" style="margin-top: 15px;">
                         <div class="col-md-4">
                             <label for="city" class="control-label">Город проживания</label>
                         </div>
                         <div class="col-md-8">
                             <div class="form-group">
                                 <div class="col-sm-9">
-                                    <input type="text" ng-model="cityName" ng-blur="watchCity(cityName)" class="form-control" id="city"
+                                    <input type="text" class="form-control" id="city"
                                            placeholder=""">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div ng-controller="CompleteSubway">
-                    <div class="row" style="margin-top: 15px;">
+                    <div class="row" id="subway-container" style="margin-top: 15px;">
                         <div class="col-md-4">
                             <label for="subway" class="control-label">Ближайшее метро</label>
                         </div>
@@ -197,7 +197,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
                     </div>
 
                     <div class="row" style="margin-top: 15px;">
