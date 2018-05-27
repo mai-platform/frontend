@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html ng-app="tagInput">
+<html>
 <head>
     <meta charset="utf-8">
     <title>Вакансии компании</title>
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://mbenford.github.io/ngTagsInput/css/ng-tags-input.min.css"/>
-    <script src="../libs/angular/angular.min.js"></script>
-    <script src="../libs/angular/ng-tags-input.min.js"></script>
+    <link rel="stylesheet" href="../libs/jQuery-Tags-Input-master/dist/jquery.tagsinput.min.css">
     <script src="../js/scripts.min.js"></script>
 </head>
 <body>
@@ -142,7 +140,7 @@
                             <div class="col-md-8">
                                 <div class="form-group">
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control " id="speciality"
+                                        <input type="text" class="form-control" id="speciality"
                                                placeholder="">
                                     </div>
                                 </div>
@@ -187,17 +185,8 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="form-group">
-                                    <div class="col-sm-9" ng-controller="Input">
-                                        <tags-input class="bootstrap"
-                                                    ng-model="skills"
-                                                    placeholder="Введите навык и нажмите 'Enter'"
-                                                    replace-spaces-with-dashes="false">
-                                            <auto-complete source="loadSkills($query)"
-                                                           min-length="0"
-                                                           debounce-delay="0"
-                                                           max-results="10">
-                                            </auto-complete>
-                                        </tags-input>
+                                    <div class="col-sm-9">
+                                        <input type="text" name="tags" id="tags" class="form-control" id="skills" placeholder="Не работают">
                                     </div>
                                 </div>
                             </div>
