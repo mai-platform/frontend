@@ -1,9 +1,11 @@
 $(function() {
 	var $datepicker = $("#birthday");
-	$datepicker.datepicker({
-			dateFormat:"d M yy",
-			monthNames : ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-			monthNamesShort: [ "Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря" ],
-			dayNamesMin : ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+	$datepicker.bootstrapMaterialDatePicker({
+		format :'DD MMMM YYYY',
+		weekStart : 0,
+		time: false,
+		lang : 'ru',
+		cancelText: 'Отменить',
+		okText: 'Подтвердить'
 	});
 });
