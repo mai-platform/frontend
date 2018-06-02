@@ -6,6 +6,6 @@ $(function() {
 		time: false,
 		lang : 'ru',
 		cancelText: 'Отменить',
-		okText: 'Подтвердить'
+		okText: 'ОК'
 	});
 });
