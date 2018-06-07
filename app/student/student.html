@@ -7,56 +7,29 @@
 </head>
 <body>
 <!-- Шапка -->
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">
+        <div class="navbar-header col-xs-1">
+            <a class="navbar-brand header__brand" href="#">
                 <img alt="Brand" class="header__logo" src="../img/header/mai.gif">
             </a>
         </div>
-        <form class="navbar-form navbar-left ">
-            <div class="header-search">
-                <input type="text" class="form-control input-sm header-search__input" maxlength="64"
-                       placeholder="Я ищу..."/>
-                <button type="submit" class="btn btn-primary btn-sm header-search__button">Найти</button>
-            </div>
-        </form>
-
-        <div class="navbar-right header__stretch">
-            <div class="dropdown">
-                <div class="header__stretch__messages btn btn-link" dropdown-toggle header__stretch__dropdown-button
-                " data-toggle="dropdown">
-                <i class="fas fa-flag"></i>
-                <div style="display: flex;
-padding: 5px 9px;
-background: red;
-line-height: 14px;
-top: -10px;
-left: -10px;
-position: absolute;
-justify-content: center;
-justify-items: center;
-justify-self: center;
-text-align: center;
-
-border-radius: 30px;">
-                    <div style="font-size: 13px;color: white;">3</div>
+            <div class="navbar-right header__stretch">
+                <div class="dropdown">
+                    <div class="header__stretch__messages btn btn-link" dropdown-toggle header__stretch__dropdown-button
+                    " data-toggle="dropdown">
+                    <i class="fas fa-flag"></i>
+                    <div class="header__stretch__messages-counter">
+                        <div style="font-size: 13px;color: white;">3</div>
+                    </div>
                 </div>
-            </div>
-            <div class="dropdown-menu header__stretch__messages-list">
-                <div class="header__stretch__messages-list__title"> Уведомления</div>
-                <div class="header__stretch__messages-list__content">
-                    <div class="btn-default container header__stretch__messages-list__content__node media">
-                        <a href="#" class="pull-left">
-                            <img src="../img/student/student.jpg" class="header__stretch__avatar">
-                        </a>
+                <div class="dropdown-menu header__stretch__messages-list">
+                    <div class="header__stretch__messages-list__title"> Уведомления</div>
+                    <div class="header__stretch__messages-list__content">
+                        <div class="btn-default container header__stretch__messages-list__content__node media">
+                            <a href="#" class="pull-left">
+                                <img src="../img/student/student.jpg" class="header__stretch__avatar">
+                            </a>
                         <div class="media-body">
                             <span class="media-meta pull-right">Febrero 13, 2016</span>
                             <h4 class="title">Lorem Impsum</h4>
@@ -116,9 +89,25 @@ border-radius: 30px;">
             </ul>
         </div>
     </div>
+    <div class="header__hint-panel">
+        <button type="button" class="navbar-toggle btn-default collapsed" data-toggle="collapse"
+                    data-target="#navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <form class="navbar-form navbar-left header__form">
+            <div class="header-search">
+                <input type="text" class="form-control input-sm header-search__input" maxlength="64"
+                       placeholder="Я ищу..."/>
+                <button type="submit" class="btn btn-primary btn-sm header-search__button">Найти</button>
+            </div>
+        </form>
+    </div>    
     </div>
     <div class="container-fluid" style="border-bottom: 2px solid rgba(0,0,0,0.1);"></div>
-    <div class="container">
+    <div class="container collapse navbar-collapse" id="navbar">
         <ul class="nav navbar-nav navbar-left">
             <li><a href="#">Ищу практику</a></li>
             <li><a href="#">Ищу работу</a></li>

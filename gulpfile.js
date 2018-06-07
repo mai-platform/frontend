@@ -48,12 +48,15 @@ gulp.task('common-js', function() {
 gulp.task('js', ['common-js'], function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
-		'app/libs/jquery.kladr/jquery.kladr.min.js',
 		'app/libs/bootstrap-sass/assets/javascripts/bootstrap.min.js',
-		'app/js/common.min.js', // Всегда в конце
+		'app/libs/bootstrap-tagsinput-latest/dist/bootstrap-tagsinput.min.js',
+		'app/libs/jQuery-Tags-Input-master/dist/jquery.tagsinput.min.js'
+		//'app/libs/angular/angular.min.js',
+		//'app/libs/angular/ng-tags-input.min.js',
+		//'app/js/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
-	// .pipe(uglify()) // Минимизировать весь js (на выбор)
+	//.pipe(uglify()) // Минимизировать весь js (на выбор)
 	.pipe(gulp.dest('app/js'))
 	.pipe(browserSync.reload({stream: true}));
 });
@@ -62,9 +65,9 @@ gulp.task('browser-sync', function() {
 	browserSync({
 		server: {
 			baseDir: "app",
-			index: "student_edit_serts.html"
+			index: "student/student.html"
 		},
-		notify: false,
+		notify: false
 		// tunnel: true,
 		// tunnel: "projectmane", //Demonstration page: http://projectmane.localtunnel.me
 	});
@@ -87,7 +90,7 @@ gulp.task('watch', ['sass', 'js'/*, 'babelify'*/, 'browser-sync'], function() {
 	gulp.watch('app/libs/bootstrap-sass/assets/stylesheets/bootstrap/**/*.sass',['sass']);
 	gulp.watch('app/libs/bootstrap-sass/assets/stylesheets/bootstrap/*.sass',['sass']);
 	gulp.watch(['app/js/*.js', 'app/js/common.js'], ['js']);
-	gulp.watch('app/*.html', browserSync.reload);
+	gulp.watch(['app/company/*.html', 'app/student/*.html'], browserSync.reload);
 	gulp.watch('app/blocks/*.html', browserSync.reload);
 });
 

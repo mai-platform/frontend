@@ -42,11 +42,26 @@
       font-size: 20px
       i
         color: #0069ff
+      &-counter
+        display: flex
+        padding: 5px 9px
+        background: red
+        line-height: 14px
+        top: -10px
+        left: -10px
+        position: absolute
+        justify-content: center
+        justify-items: center
+        justify-self: center
+        text-align: center
+        border-radius: 30px
       &-list
         padding-top: 0px
         padding-bottom: 0px
         width: 300px
         border-radius: 0px
+        @media screen and (max-width:767px)
+          width 200px
         &__title
           font-weight: bold
           padding: 4px
@@ -109,6 +124,25 @@
       margin: 0 15px 0 40px
       float: right
       border: 1px solid rgba(0,0,0,0.07)
+      @media screen and (max-width:767px)
+        margin: 0 10px 0 0
+      @media screen and (max-width:480px)
+        width: auto
     &__button
       width: 130px
       float: right
+      @media screen and (max-width:767px)
+        width: auto
+  &__form
+    border: none
+    @media screen and (max-width:767px)
+      margin:
+        top: 0
+        bottom: 0
+  &__brand
+    @media screen and (max-width:480px)
+      padding: 0
+  &__hint-panel
+    display: flex
+    justify-content: space-between
+    align-items: center
