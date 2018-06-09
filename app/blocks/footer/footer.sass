@@ -6,9 +6,14 @@
   justify-content: space-around
   padding-top: 75px
   padding-bottom: 75px
+  @media screen and (max-width:625px)
+    padding-top: 45px
+    padding-bottom: 45px
   &__logo
     height: 45px
     margin-right: 30px
+    @media screen and (max-width:767px)
+         margin-right: 15px
   &-social
     list-style: none
     padding: 0
@@ -22,6 +27,9 @@
       font-size: 24px
       margin-right: 12px
       color: #333
+      @media screen and (max-width:767px)
+         font-size: 18px
+         margin-right: 6px
   &-contacts
     display: flex
     flex-direction: row
@@ -32,11 +40,39 @@
       font-family: "OpenSans", sans-serif
       font-size: 16.0px
       margin-right: 30px
+      @media screen and (max-width:767px)
+        font-size: 14px
+        margin-right: 15px
     &__adress
       color: #878787
       font-family: "OpenSans", sans-serif
       font-size: 16.0px
+      @media screen and (max-width:767px)
+        font-size: 14px
+        margin-right: 15px
   &__title
       font-family: "OpenSans", sans-serif
       font-size: 16.0px
       margin-bottom: 20px
+      @media screen and (max-width:625px)
+        margin-bottom: 5px
+  &-copyright
+  	@media screen and (max-width:625px)
+  		display: block
+  		padding-top: 10px
+  	&_wrapper
+  		@media screen and (max-width:625px)
+  			display: flex
+  			justify-content: center
+  	.navbar
+  		@media screen and (max-width:767px)
+  			min-height: 0
+  		@media screen and (max-width:625px)
+  			display: flex
+  			justify-content: space-between
+  		li
+  			@media screen and (max-width:767px)
+  				float: left
+  				padding-right: 5px
+  			@media screen and (max-width:625px)
+  				padding-right: 15px
